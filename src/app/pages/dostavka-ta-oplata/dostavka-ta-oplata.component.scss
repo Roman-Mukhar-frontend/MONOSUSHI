@@ -1,0 +1,103 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/base";
+
+
+.name {
+  width: 400px;
+  border-top: 7px solid $mainCol;
+  margin: 50px auto;
+  font-size: 40px;
+  font-weight: bolder;
+  padding: 10px 5px;
+  text-align: center;
+
+}
+.delivery {
+  width: 80%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 250px;
+
+  }
+  &__box {
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+    text-align: center;
+    line-height: 30px;
+
+  }
+  &__map {
+    width: 80%;
+    margin: 50px auto;
+    height: 600px;
+    border: 1px solid black;
+  }
+}
+.green {
+  color: $greenText;
+  font-weight: bold;
+}
+.yellow {
+  color: $yellowText;
+  font-weight: bold;
+}
+h1 {
+  font-size: 26px;
+}
+.description {
+  width: 70%;
+  margin: 50px auto;
+  color: $lightText;
+  letter-spacing: 1px;
+  font-size: 15px;
+  line-height: 20px;
+
+}
+.payments {
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  &__header {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    color: $darkText;
+    padding: 20px;
+  }
+}
+.payment {
+  width: 340px;
+  display: flex;
+  margin: 0 20px;
+
+  img {
+    width: 70px;
+    height: 70px;
+    background-color: $mainCol;
+    padding: 15px 10px;
+    border-radius: 7px;
+    margin: 5px;
+  }
+  &__top {
+    font-size: 16px;
+    font-weight: bold;
+    color: $darkText;
+    padding: 10px 10px;
+  }
+  &__desc {
+    font-size: 15px;
+    font-weight: 100;
+    color: $lightText;
+    padding: 0 10px;
+  }
+}
+.bord {
+  border-right: 2px solid $mainCol;
+}

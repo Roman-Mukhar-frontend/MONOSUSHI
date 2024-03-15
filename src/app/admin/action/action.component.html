@@ -1,0 +1,64 @@
+
+
+<button class="btn" (click)="changeStatusForAddNewDiscount()">Додати акцію</button>
+<table class="table" *ngIf="addNewDiscount">
+    <thead>
+        <tr>
+            <th class="th1">Дата</th>
+            <th class="th2">Назва</th>
+            <th class="th3">Заголовок</th>
+            <th class="th4">Опис</th>
+            <th class="th5">Картинка</th>
+            <th class="th6" >Дії</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let discount of adminDiscounts">
+            <td>{{discount.date | date:'MM.YYYY '}}</td>
+            <td>{{discount.name}}</td>
+            <td>{{discount.title}}</td>
+            <td>{{discount.description | slice:0:30 }} <span
+                *ngIf="discount.description.length > 33">...</span>
+            </td>
+            <td><img [src]="discount.imagePath"
+                    [alt]="discount.name" width="80px">
+            </td>
+            <td class="td">
+                <button (click)="editDiscount(discount)"
+                    class="table-btn">Редагувати</button>
+                <button (click)="deleteDiscount(discount)"
+                    class="table-btn">Видалити</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<form class="form" [formGroup]="discountForm" (ngSubmit)="saveDiscount()"
+    *ngIf="!addNewDiscount">
+
+    <input formControlName="name"
+        class="form__input" type="text" placeholder="*Назва">
+
+    <input formControlName="title"
+        class="form__input" type="text" placeholder="*Заголовок">
+
+    <input formControlName="description"
+        class="form__input" type="text" placeholder="*Опис">
+
+    <ng-container *ngIf="!isUploaded">
+        <input class="form__file" type="file" placeholder=""
+            (change)="upload($event)">
+    </ng-container>
+
+    <ng-container *ngIf="isUploaded">
+        <div class="form__imgAdd">
+        <img class="" [src]="valueByControl('imagePath')"
+            alt="image">
+        <button type="button" class="form__btn" (click)="deleteImage()">ВИДАЛИТИ</button>
+    </div>
+    </ng-container>
+
+    <button type="submit" [disabled]="discountForm.invalid"
+        class="form__btn"> {{ editStatus ? 'ЗБЕРЕГТИ' : 'ДОДАТИ' }} </button>
+</form>

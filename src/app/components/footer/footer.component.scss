@@ -1,0 +1,119 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/base";
+
+
+.footer {
+  width: 100%;
+  height: 179px;
+  border-top: 5px solid $mainCol;
+  padding: 15px;
+  // position: absolute;
+  // bottom: 0;
+
+  &__top,
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.img {
+  width: 120px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+
+  &__li {
+    margin: 0 10px;
+  }
+
+  &__li a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      @extend %text-color;
+  }
+
+  }
+}
+
+.info {
+
+  &__order {
+    margin: 0 20px;
+  }
+}
+
+.text {
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.info {
+  display: flex;
+
+  &__delivery,
+  &__order,
+  &__work-time {
+    text-align: center;
+  }
+}
+
+.footer__bottom {
+  margin-top: 20px;
+  align-items: center;
+}
+
+.payment {
+  display: flex;
+
+  &__card {
+    border: 1px solid $mainCol;
+    margin: 0 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon-ul {
+  display: flex;
+}
+
+.icon {
+  width: 49px;
+  height: 49px;
+  background-color: $mainCol;
+  border: 2px solid $mainCol;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    @extend %btn;
+  }
+}
+
+
+.a {
+  text-decoration: none;
+  color: black;
+}

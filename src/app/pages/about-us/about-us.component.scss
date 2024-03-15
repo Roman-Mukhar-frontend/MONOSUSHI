@@ -1,0 +1,183 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/base";
+
+.header {
+    width: 200px;
+    border-top: 7px solid $mainCol;
+    margin: 50px auto;
+    font-size: 40px;
+    font-weight: bolder;
+    padding: 10px 5px;
+    text-align: center;
+}
+.about {
+  width: 90%;
+  margin: 10px auto;
+  &__header {
+    font-size: 34px;
+    font-weight: bold;
+    color: $darkText;
+    padding: 10px 0;
+
+  }
+  &__text {
+    font-weight: 100;
+    color: $lightText;
+    line-height: 30px;
+    letter-spacing: 0, 8px;
+
+  }
+}
+ul {
+  margin: 20px 0;
+}
+
+ul li {
+  padding: 7px 0px;
+  display: flex;
+  align-items: center;
+
+}
+
+.circle {
+    width: 8px;
+    height: 8px;
+    border: 1px solid $mainCol;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.dot {
+    width: 2px;
+    height: 2px;
+    border: 1px solid $mainCol;
+    border-radius: 1px;
+}
+
+.li-span {
+    color: $lightText;
+}
+
+.aboutContainer {
+  margin: 100px auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  img {
+    width: 500px;
+    border-radius: 5%;
+    margin-bottom: 70px;
+
+  }
+  &__block {
+    width: 450px;
+    padding: 120px 50px;
+
+    h3 {
+      color: $darkText;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 20px 0;
+    }
+    p {
+      color: $lightText;
+      line-height: 35px;
+
+    }
+    span {
+      font-weight: bolder;
+      color: $darkText;
+    }
+  }
+}
+.headerName {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bolder;
+  margin: 70px 0;
+
+}
+.advantages {
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__block {
+    width: 25%;
+    min-height: 200px;
+    padding: 0 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 70px;
+      height: 70px;
+      padding: 10px;
+    }
+    h2 {
+      color: $darkText;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px 0;
+      padding: 0 20px;
+    }
+    p {
+      color: $lightText;
+      font-weight: 100;
+      line-height: 25px;
+
+    }
+  }
+  .border {
+    border-right: 2px solid $lightBorder;
+  }
+}
+.question {
+  width: 80%;
+  min-height: 100px;
+  padding: 0 25px;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid $lightBorder;
+  position: relative;
+  line-height: 35px;
+
+
+  h2 {
+    width: 100%;
+    color: $darkText;
+    font-size: 22px;
+    font-weight: bolder;
+    padding: 20px 0;
+
+  }
+  p {
+    color: $lightText;
+    font-size: 17px;
+    font-weight: 100;
+    padding: 5px 0;
+
+  }
+  &__ask {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 15px;
+    color: $lightText;
+    &:hover {
+      color: $mainCol;
+    }
+  }
+}

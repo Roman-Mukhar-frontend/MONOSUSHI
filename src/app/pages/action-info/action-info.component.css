@@ -1,0 +1,132 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@keyframes drawborder {
+  25% {
+    border-top-color: #b5d8f7;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: #b5d8f7;
+    border-right-color: #b5d8f7;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  75% {
+    border-top-color: #b5d8f7;
+    border-right-color: #b5d8f7;
+    border-bottom-color: #b5d8f7;
+    border-left-color: transparent;
+  }
+  100% {
+    border-color: #b5d8f7;
+  }
+}
+@keyframes btn-background {
+  100% {
+    background-color: white;
+  }
+}
+@keyframes text-color {
+  100% {
+    color: #b5d8f7;
+  }
+}
+@keyframes text-decor {
+  100% {
+    color: #b5d8f7;
+    text-decoration: underline;
+    text-decoration-color: #b5d8f7;
+  }
+}
+.route {
+  margin: 20px;
+  color: #b5d8f7;
+  font-size: 14px;
+}
+.route a {
+  text-decoration: none;
+  color: #b5d8f7;
+}
+
+.info {
+  margin: 100px auto;
+  width: 60%;
+}
+.info__title {
+  cursor: pointer;
+  width: 100%;
+  height: 200px;
+  background-color: #b5d8f7;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #252525;
+}
+.info__title h1 {
+  width: 80%;
+  border-top: 5px solid #252525;
+  padding: 10px 0;
+  text-align: center;
+}
+.info p {
+  margin: 15px;
+  width: 90%;
+  line-height: 40px;
+  color: #707070;
+}/*# sourceMappingURL=action-info.component.css.map */

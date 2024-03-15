@@ -1,0 +1,153 @@
+@keyframes drawborder {
+  25% {
+    border-top-color: #b5d8f7;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: #b5d8f7;
+    border-right-color: #b5d8f7;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  75% {
+    border-top-color: #b5d8f7;
+    border-right-color: #b5d8f7;
+    border-bottom-color: #b5d8f7;
+    border-left-color: transparent;
+  }
+  100% {
+    border-color: #b5d8f7;
+  }
+}
+@keyframes btn-background {
+  100% {
+    background-color: white;
+  }
+}
+@keyframes text-color {
+  100% {
+    color: #b5d8f7;
+  }
+}
+@keyframes text-decor {
+  100% {
+    color: #b5d8f7;
+    text-decoration: underline;
+    text-decoration-color: #b5d8f7;
+  }
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  width: 300px;
+  border-top: 7px solid #b5d8f7;
+  margin: 40px auto 20px;
+  font-size: 40px;
+  font-weight: bolder;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.userDiscount {
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.userDiscount__block {
+  width: 500px;
+  margin: 15px;
+  text-align: center;
+}
+.userDiscount__block__img {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 5px;
+}
+.userDiscount__block__name {
+  height: 80px;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bolder;
+  color: #252525;
+  padding: 20px;
+  border-bottom: 4px solid #b5d8f7;
+}
+.userDiscount__block__btn {
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: 4px solid #b5d8f7;
+  background-color: #b5d8f7;
+  font-size: 25px;
+  font-weight: bolder;
+  color: #252525;
+}
+.userDiscount__block__btn:hover {
+  background-color: rgb(242, 246, 250);
+  color: #707070;
+}
+.userDiscount__block:hover .userDiscount__block__name {
+  color: #b5d8f7;
+}
+.userDiscount__block:hover .userDiscount__block__img {
+  transform: scale(1.05);
+  transition-duration: 500ms;
+}/*# sourceMappingURL=actions.component.css.map */

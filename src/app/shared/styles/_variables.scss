@@ -1,0 +1,93 @@
+// @import "../styles/mixins/media";
+
+// @import "../styles/mixins/media";
+
+
+$body: rgb(242, 246, 250);
+$white: rgb(255, 255, 255);
+$mainCol: #b5d8f7;
+$scroll: #dae8f5;
+$lightText: #707070;
+$lightBorder: #bdbbbb;
+$lighterBorder: #d6d1d1a9;
+$darkText: #252525;
+$darkShadow: #0303036b;
+$greenText: #27ae60;
+$yellowText: #f2c94c;
+$redCol: #eb2020;
+
+
+
+//Amimation border
+%border {
+    border: 2px solid transparent;
+    border-radius: 15px;
+  
+    &:hover {
+      animation: drawborder 500ms linear forwards;
+    }
+  }
+  @keyframes drawborder {
+    25% {
+      border-top-color: $mainCol;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+    50% {
+      border-top-color: $mainCol;
+      border-right-color: $mainCol;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+    75% {
+      border-top-color: $mainCol;
+      border-right-color: $mainCol;
+      border-bottom-color: $mainCol;
+      border-left-color: transparent;
+    }
+    100% {
+      border-color: $mainCol;
+    }
+  }
+  //----End Amimation border
+
+// button background
+%btn {
+  cursor: pointer;
+  &:hover {
+  animation: btn-background 500ms linear forwards;
+  }
+}
+@keyframes btn-background {
+  100% {
+    background-color: white;
+  }
+}
+
+
+%text-color {
+  cursor: pointer;
+  &:hover {
+  animation: text-color 500ms linear forwards;
+}
+}
+@keyframes text-color {
+  100% {
+    color: $mainCol;
+  }
+}
+
+%text-decor {
+  cursor: pointer;
+  &:hover {
+  animation: text-decor 500ms ease-out forwards;
+}
+}
+@keyframes text-decor {
+  100% {
+    color: $mainCol;
+    text-decoration: underline;
+    text-decoration-color: $mainCol;
+  }
+}

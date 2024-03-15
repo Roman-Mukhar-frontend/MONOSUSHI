@@ -1,0 +1,78 @@
+@import "../../shared/styles/base";
+@import "../../shared/styles/variables";
+
+.btn, .form__btn {
+    width: 200px;
+    height: 50px;
+    background-color: $mainCol;
+    border: 2px solid $mainCol;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    border-radius: 10px;
+    &:hover {
+        @extend %btn;
+    }
+}
+    
+.table {
+    width: 100%;
+    th {
+        text-align: left;
+    }
+    tr {
+        border-bottom: 1px solid $mainCol;
+    }
+    td {
+        vertical-align: middle;
+}
+}
+.th1 {
+width: 10%;
+}
+.th2, .th4, .th5 {
+width: 20%;
+}
+.th3 {
+width: 30%;
+}
+
+.table-btn {
+    display: block;
+    border: none;
+    background: none;
+    font-weight: bolder;
+    color: $mainCol;
+    &:hover {
+        @extend %text-decor;
+    }
+}
+.form {
+    width: 70%;
+
+    &__input {
+        width: 50%;
+        height: 50px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border: 1px solid $mainCol;
+    }
+
+    &__file {
+        width: 100%;
+        border: 1px solid $mainCol;
+        height: 50px;
+        padding: 10px;
+        margin-bottom: 20px;
+        
+    }
+    &__imgAdd {
+        display: flex;
+        flex-direction: column;
+        img {
+            width: 50px;
+            margin-bottom: 20px;
+        }
+    }
+
+    
+}

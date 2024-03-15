@@ -1,0 +1,70 @@
+{
+  "categories": [
+    {
+      "name": "роли",
+      "path": "roli",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+      "id": 1
+    },
+    {
+      "name": "сети",
+      "path": "setu",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Fsetu.svg?alt=media&token=768b3608-57b4-43a4-b12e-f7a69f9c7347",
+      "id": 2
+    },
+    {
+      "name": "напої",
+      "path": "napoyi",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Fnapoyi.svg?alt=media&token=ee555bb6-e030-4a02-8eab-2013c6e31581",
+      "id": 3
+    },
+    {
+      "name": "соуси",
+      "path": "sousi",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Fsousi.svg?alt=media&token=23764559-59b0-4e75-ba61-1dc534f600ab",
+      "id": 4
+    }
+  ],
+  "actions": [
+    {
+      "name": "РОЛ ТИЖНЯ",
+      "title": "50% знижки на \"Рол тижня\"",
+      "description": "Щотижня діє знижка 50% на один з ролів у нашому меню. “Рол тижня” ви можете знайти на головній сторінці нашого сайту. Знижка діє при мінімальній сумі замовлення 300 грн. Ця акція не поєднується з іншими акціями.",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/discount-images%2Frol-week.jpg?alt=media&token=6acaa1ab-7483-42ad-af03-2e761eecc5a7",
+      "date": "2024-03-14T11:24:41.408Z",
+      "id": 1
+    },
+    {
+      "name": "3+1=5",
+      "title": "\"3+1=5\"",
+      "description": "Замовляйте 5 ролів, а платіть за 4. Замовляйте 10 ролів, а платіть за 8 і так далі. Безкоштовним вважається рол з найменшою вартістю. Ця акція не поєднується з іншими акціями.",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/discount-images%2Fsum.jpg?alt=media&token=3d14b63a-50ea-4940-a4c3-fa27b233cb57",
+      "date": "2024-03-14T11:26:49.577Z",
+      "id": 2
+    },
+    {
+      "name": "САМОВИВІЗ",
+      "title": "САМОВИВІЗ",
+      "description": " Забирайте своє замовлення самостійно та отримуйте такі переваги:  Запечені моно макі з лососем у подарунок. Відсутність мінімальної суми замовлення. Час очікування на замовлення до 30 хв. Для отримання акційного ролу у подарунок зберігається умова мінімальної суми замовлення 300 грн. Ця акція не поєднується з іншими акціями.",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/discount-images%2Ftogo.jpg?alt=media&token=947340f8-f93d-48d2-9fa4-74de36d914ab",
+      "date": "2024-03-14T11:27:47.076Z",
+      "id": 3
+    },
+    {
+      "name": "ДЕНЬ НАРОДЖЕННЯ З МОНОСУШІ",
+      "title": "ДЕНЬ НАРОДЖЕННЯ З МОНОСУШІ",
+      "description": "Святкуй з Monosuchi! Суші акція до дня народження Незабаром свято? Найкращий день народження  — зі смачними ролами. Monosuchi підготували для вас дещо особливе. І це — не просто знижка. Даруємо “Запечений сет” безкоштовно  до вашого замовлення! Ще більше суші на день народження для вас та ваших гостей.   Як отримати “Запечений сет” на день народження? Скористатися акцією можна просто:  Замовте суші на 750 грн та більше. Це можуть бути будь-які позиції з нашого меню. Оберіть зі списку акцій – “Акцію до дня народження” під час оформлення замовлення.  Покажіть кур’єру при отриманні  документ (оригінал), який підтверджує вашу дату народження. Готово: отримайте “Запечений сет” та насолоджуйтеся неповторним смаком ролів від  Monosuchi!  Суші акція діє на ваш  день народження + один день до та після свята.  Зверніть увагу: ця акція не сумується з іншими акціями.",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/discount-images%2Fbirthday.jpg?alt=media&token=4b9ed318-2f0b-46dd-bf78-5b5ae6489176",
+      "date": "2024-03-14T11:28:40.215Z",
+      "id": 4
+    },
+    {
+      "name": "ФОТОМАРАФОН",
+      "title": "ФОТОМАРАФОН",
+      "description": "Розіграш проводиться в соціальній мережі – Instagram. Щоб стати учасником розіграшу варто зробити будь-який контент на задану тему з нашими ролами. Це може бути фото, відео, tik-tok. Обов’язково позначай нас на пості або сторі, щоб стати учасником марафону. ( інакше ми вас не побачимо ) Марафон діє на постійній основі. Переможці визначаються два рази на місяць. Перше місце-Запечений сирний з лососем. Друге місце-Філадельфія з лососем. Третє місце-Запечені моно макі з креветкою. Деталі актуального марафону уточнюйте в нашому Instagram: @monosushi.com.ua",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/discount-images%2Ffoto.jpg?alt=media&token=aebd2a1f-4d92-41c2-924a-e239e0cc46cd",
+      "date": "2024-03-14T11:29:28.654Z",
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+@import "../../shared/styles/base";
+@import "../../shared/styles/variables";
+
+.route{
+  margin: 20px;
+  color: $mainCol;
+  font-size: 14px;
+  a{
+    text-decoration: none;
+    color: $mainCol;
+
+  }
+}
+.info {
+  margin: 100px auto;
+  width: 60%;
+
+  &__title {
+    cursor: pointer;
+    width: 100%;
+    height: 200px;
+    background-color: $mainCol;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color: $darkText;
+    h1 {
+      width: 80%;
+      border-top: 5px solid $darkText;
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+  p {
+    margin: 15px;
+    width: 90%;
+    line-height: 40px;
+    color: $lightText;
+  }
+}

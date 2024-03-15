@@ -1,0 +1,185 @@
+<header>
+  <div class="header">
+    <div class="logo">
+      <a [routerLink]="[ '' ]">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Flogo.svg?alt=media&token=2836069a-a498-4b61-8b95-79b5f13e00f8"
+          alt="">
+
+      </a>
+    </div>
+    <div class="nav">
+      <div class="nav__link" [routerLink]="[ '/actions' ]">
+        <!-- <div class="nav__link__img"> -->
+        <img class="nav__link__img"
+          src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Factions.svg?alt=media&token=360cc0f6-5d97-468a-a471-dd410b77b24e"
+          alt="">
+        <!-- </div> -->
+        <p class="nav__link__name">Акції</p>
+      </div>
+      <div class="nav__link" *ngFor="let category of usersCategoriesArr"
+        [routerLink]="[ '/product-category/'+ category.path]">
+        <!-- <div class="nav__link__img"> -->
+        <img class="nav__link__img" [src]="category.imagePath" alt="">
+        <!-- </div> -->
+        <p class="nav__link__name">{{category.name}}</p>
+      </div>
+    </div>
+
+    <div class="menu" [ngClass]="{'active': active}" (click)="menuToggle()">
+      <span class="menu-1 " title="menu"></span>
+      <div class="header-menu" *ngIf="openBurgerMenu">
+
+        <ul>
+          <li class="header-menu__li"><a [routerLink]="[ '/dostavka-ta-oplata' ]">Доставка
+              та оплата</a></li>
+          <li class="header-menu__li"><a [routerLink]="[ '/about-us' ]">Про
+              нас</a></li>
+          <li class="header-menu__li"><a [routerLink]="[ '/actions' ]">Акції</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="call-back">
+      <div class="call-back__wrapper" (click)="openCallBackFunc()">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fphone.svg?alt=media&token=dc1176ea-2b74-46e9-86db-d9da057123e6"
+          alt="">
+        <span class="call-back__wrapper__text">МИ ЗАТЕЛЕФОНУЄМО</span>
+      </div>
+    </div>
+    <div class="info">
+      <div class="info__number">+380978780837</div>
+      <div>Працюємо з
+        <span class="info__number__time">11:00</span>
+        до
+        <span class="info__number__time">22:30</span>
+      </div>
+    </div>
+
+    <div class="user">
+      <div class="user__logo" (click)="openSignInFunc()">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fuser.svg?alt=media&token=39350238-8708-402b-adcf-d904fd192e5b"
+          alt="">
+      </div>
+    </div>
+    <div class="basket" [ngClass]="{'basket-bgr-white': openBasket}" (click)="openBasketFunc()">
+      <div class="basket__logo">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fbasket.svg?alt=media&token=cdc80f39-9bb1-4df3-97c6-5ba856989c29"
+          alt="">
+        <div class="basket__count">0</div>
+      </div>
+      <div class="basket__text"> <span class="bold">0</span> грн</div>
+
+    </div>
+
+
+  </div>
+
+
+</header>
+
+
+
+<!-- UserModal -->
+<div class="wrapper-modal" *ngIf="openModal" (click)="closeModal()">
+</div>
+
+<div class="user-modal" *ngIf="openModal" [ngClass]="{'user-modal__signUp': openSignUp}">
+  <div class="user-modal__close">
+    <button class="btn-close" (click)="closeModal()"></button>
+  </div>
+  <!-- call back modal -->
+  <div class="user-modal__wrapper" *ngIf="openCallBack">
+    <h1 class="user-modal__title bold">МИ ЗАТЕЛЕФОНУЄМО</h1>
+    <p class="user-modal__text">Залиште номер телефону і наші менеджери зв’яжуться з вами</p>
+    <form class="user-modal__form">
+      <input type="text" name="" class="user-modal__form__input" placeholder="Ваше ім'я">
+      <input type="text" name="" class="user-modal__form__input" placeholder="Ваш номер телефону">
+      <button type="submit" class="user-modal__form__btn bold">НАДІСЛАТИ</button>
+    </form>
+  </div>
+  <!-- end call back modal -->
+
+  <!-- sing in modal -->
+  <div class="user-modal__wrapper" *ngIf="openSignIn">
+    <h1 class="user-modal__title bold">Вхід в кабінет</h1>
+    <form class="user-modal__form">
+      <input class="user-modal__form__input" type="email" placeholder="*Ваш email">
+      <input class="user-modal__form__input" type="password" placeholder="*Пароль">
+      <button class="user-modal__form__btn bold" type="submit">УВІЙТИ В КАБІНЕТ</button>
+    </form>
+    <div class="user-modal__bottom">
+      <p class="user-modal__bottom__text bold" (click)="openRecoveryPasswordFunc()">Забули пароль?</p>
+      <p class="user-modal__bottom__text bold" (click)="openSignUpFunc()">Зареєструватись</p>
+    </div>
+  </div>
+  <!-- end sing in modal -->
+
+  <!-- Recovery Password modal -->
+  <div class="user-modal__wrapper" *ngIf="openRecoveryPassword">
+    <h1 class="user-modal__title bold">Відновити пароль</h1>
+    <p class="user-modal__title__text">Після заповнення форми ми надішлемо вам детальну інструкцію по відновленню паролю
+    </p>
+    <form class="user-modal__form">
+      <input class="user-modal__form__input" type="email" placeholder="*Ваш email">
+      <button class="user-modal__form__btn bold" type="submit">Відновити пароль</button>
+    </form>
+    <div class="user-modal__bottom">
+      <p class="user-modal__bottom">Повернутись до <span (click)="openSignInFunc()" class="user-modal__bottom__span">
+          Входу</span></p>
+    </div>
+  </div>
+  <!--end Recovery Password modal -->
+
+  <!-- sign up modal -->
+  <div class="user-modal__wrapper" *ngIf="openSignUp">
+    <h1 class="user-modal__title">Зареєструватись</h1>
+    <form class="user-modal__form">
+      <div class="form-w-40">
+        <input class="user-modal__form__input w-40" type="text" placeholder="Ваше ім'я">
+        <input class="user-modal__form__input w-40" type="text" placeholder="Ваше прізвище">
+      </div>
+      <input class="user-modal__form__input" type="text" placeholder="Ваш телефон">
+      <input class="user-modal__form__input" type="email" placeholder="Ваш email">
+      <div class="form-w-40">
+        <input class="user-modal__form__input w-40" type="password" placeholder="Пароль">
+        <input class="user-modal__form__input w-40" type="password" placeholder="Повторіть пароль">
+      </div>
+      <div class="user-modal__form__label">
+        <input type="checkbox" id="checkbox" class="checkbox">
+        <label for="checkbox" class="bold label">Я погоджуюсь з</label>
+        <span class="bold label-text"> Правилами користування</span>
+      </div>
+      <button class="user-modal__form__btn bold" type="submit">Зареєструватись</button>
+    </form>
+    <p>Вже зареєстровані? <span class="bold span" (click)="openSignInFunc()">Увійти</span></p>
+  </div>
+  <!-- end sign up modal -->
+
+</div>
+
+
+<!-- basket modal -->
+<div class="wrapper-modal" *ngIf="openBasket" (click)="closeModal()">
+</div>
+<div class="basket-modal" *ngIf="openBasket">
+  <div class="basket-modal__empty">
+    <img src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fcart-empty-img.svg?alt=media&token=a89aa257-aa89-495d-8268-8eb61b0d6f83" alt="">
+    <p class="basket-modal__empty__text bold">Кошик порожній</p>
+    <div class="basket-modal__empty__btn" (click)="closeModal()">
+      <a [routerLink]="[ '' ]">
+      <p class="basket-modal__empty__btn__text bold">ПЕРЕЙТИ ДО КАТАЛОГУ</p>
+    </a>
+    </div>
+
+
+  </div>
+  <div class="basket-modal__products"></div>
+  <div class="basket-modal__footer">
+    <p>Сума: <span class="bold">0 </span>грн</p>
+    <button type="button" class="basket-modal__footer__btn-order bold">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
+  </div>
+</div>

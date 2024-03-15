@@ -1,0 +1,263 @@
+@keyframes drawborder {
+  25% {
+    border-top-color: #b5d8f7;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: #b5d8f7;
+    border-right-color: #b5d8f7;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  75% {
+    border-top-color: #b5d8f7;
+    border-right-color: #b5d8f7;
+    border-bottom-color: #b5d8f7;
+    border-left-color: transparent;
+  }
+  100% {
+    border-color: #b5d8f7;
+  }
+}
+@keyframes btn-background {
+  100% {
+    background-color: white;
+  }
+}
+@keyframes text-color {
+  100% {
+    color: #b5d8f7;
+  }
+}
+@keyframes text-decor {
+  100% {
+    color: #b5d8f7;
+    text-decoration: underline;
+    text-decoration-color: #b5d8f7;
+  }
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  width: 200px;
+  border-top: 7px solid #b5d8f7;
+  margin: 50px auto;
+  font-size: 40px;
+  font-weight: bolder;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.about {
+  width: 90%;
+  margin: 10px auto;
+}
+.about__header {
+  font-size: 34px;
+  font-weight: bold;
+  color: #252525;
+  padding: 10px 0;
+}
+.about__text {
+  font-weight: 100;
+  color: #707070;
+  line-height: 30px;
+  letter-spacing: 0, 8px;
+}
+
+ul {
+  margin: 20px 0;
+}
+
+ul li {
+  padding: 7px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #b5d8f7;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.dot {
+  width: 2px;
+  height: 2px;
+  border: 1px solid #b5d8f7;
+  border-radius: 1px;
+}
+
+.li-span {
+  color: #707070;
+}
+
+.aboutContainer {
+  margin: 100px auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.aboutContainer img {
+  width: 500px;
+  border-radius: 5%;
+  margin-bottom: 70px;
+}
+.aboutContainer__block {
+  width: 450px;
+  padding: 120px 50px;
+}
+.aboutContainer__block h3 {
+  color: #252525;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+.aboutContainer__block p {
+  color: #707070;
+  line-height: 35px;
+}
+.aboutContainer__block span {
+  font-weight: bolder;
+  color: #252525;
+}
+
+.headerName {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bolder;
+  margin: 70px 0;
+}
+
+.advantages {
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.advantages__block {
+  width: 25%;
+  min-height: 200px;
+  padding: 0 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.advantages__block img {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+}
+.advantages__block h2 {
+  color: #252525;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 0;
+  padding: 0 20px;
+}
+.advantages__block p {
+  color: #707070;
+  font-weight: 100;
+  line-height: 25px;
+}
+.advantages .border {
+  border-right: 2px solid #bdbbbb;
+}
+
+.question {
+  width: 80%;
+  min-height: 100px;
+  padding: 0 25px;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #bdbbbb;
+  position: relative;
+  line-height: 35px;
+}
+.question h2 {
+  width: 100%;
+  color: #252525;
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 20px 0;
+}
+.question p {
+  color: #707070;
+  font-size: 17px;
+  font-weight: 100;
+  padding: 5px 0;
+}
+.question__ask {
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 15px;
+  color: #707070;
+}
+.question__ask:hover {
+  color: #b5d8f7;
+}/*# sourceMappingURL=about-us.component.css.map */

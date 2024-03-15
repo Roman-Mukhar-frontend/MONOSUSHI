@@ -1,0 +1,23 @@
+app/
+    components/
+        header.component
+        footer.component
+    pages/
+        home.component
+        actions.component
+        action-info.component
+        product-category.component
+        product.component
+        dostavka-ta-oplata.component
+        about-us.component
+        dogovir-oferta.component
+    shared/
+        styles/
+            _variables.scss
+            _mixins.scss
+            _base.scss
+        interfaces/
+        services/
+    admin.component
+        action.component
+        category.component
