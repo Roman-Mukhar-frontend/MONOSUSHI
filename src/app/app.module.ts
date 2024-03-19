@@ -24,10 +24,13 @@ import { DogovirOfertaComponent } from './pages/dogovir-oferta/dogovir-oferta.co
 import { AdminComponent } from './admin/admin.component';
 import { ActionComponent } from './admin/action/action.component';
 import { CategoryComponent } from './admin/category/category.component';
+import { OrderComponent } from './admin/order/order.component';
+import { AdminProductComponent } from './admin/admin-product/admin-product.component';
+
+
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
-
 import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -45,7 +48,9 @@ import { ToastrModule } from 'ngx-toastr';
     AdminComponent,
     ActionComponent,
     CategoryComponent,
-    ActionInfoComponent
+    ActionInfoComponent,
+    OrderComponent,
+    AdminProductComponent
   ],
   imports: [
     BrowserModule,

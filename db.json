@@ -66,5 +66,348 @@
       "date": "2024-03-14T11:29:28.654Z",
       "id": 5
     }
+  ],
+  "products": [
+    {
+      "category": "роли",
+      "name": "Макі з тунцем – 50%",
+      "path": "maki-z-tunczem-50/",
+      "ingredients": "Риc, крем сир, огірок, лосось",
+      "weight": "120",
+      "price": "91",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F65.-maki-z-tunczem.jpg?alt=media&token=1ba94440-ca2a-44c2-89f1-f9f4086bbb61",
+      "count": 1,
+      "id": 1
+    },
+    {
+      "category": "роли",
+      "name": "Філадельфія з лососем",
+      "path": "filadelfiya-z-lososem",
+      "ingredients": "Риc, крем сир, огірок, лосось",
+      "weight": "280",
+      "price": "287",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F1.-filadelfiya-z-lososem.jpg?alt=media&token=42824ff3-d3e6-4ac7-949a-bc40db1f91e7",
+      "count": 1,
+      "id": 2
+    },
+    {
+      "category": "роли",
+      "name": "Філадельфія в кунжуті",
+      "path": "filadelfiya-v-kunzhuti",
+      "ingredients": "Рис, крем сир, огірок, лосось, кунжут",
+      "weight": "240",
+      "price": "268",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F2.-filadelfiya-v-kunzhuti%20(1).jpg?alt=media&token=2a8007c4-5a28-45b6-aca9-a1c4f2e02fa4",
+      "count": 1,
+      "id": 3
+    },
+    {
+      "category": "роли",
+      "name": "Філадельфія з тунцем",
+      "path": "filadelfiya-z-tunczem",
+      "ingredients": "Риc, крем сир, авокадо, тунець, cоус солодкий чилі",
+      "weight": "270",
+      "price": "322",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F3.-filadelfiya-z-tuncem.jpg?alt=media&token=1307e50c-371a-42cf-a54c-00a7f4ab2f19",
+      "count": 1,
+      "id": 4
+    },
+    {
+      "category": "роли",
+      "name": "Філадельфія з вугрем",
+      "path": "filadelfiya-z-vugrem",
+      "ingredients": "Рис, крем сир, авокадо, вугор, унагі соус, кунжут",
+      "weight": "280",
+      "price": "359",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F4.-filadelfiya-z-vugr.jpg?alt=media&token=fedf8392-ff4a-4de7-8197-7c2c205a873f",
+      "count": 1,
+      "id": 5
+    },
+    {
+      "category": "роли",
+      "name": "Філадельфія з креветкою",
+      "path": "filadelfiya-z-krevetkoyu",
+      "ingredients": "Рис, крем сир, огірок, креветка, лосось",
+      "weight": "280",
+      "price": "327",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F5.-filadelfiya-z-krevetkoyu.jpg?alt=media&token=57d5f72e-db4f-4cf7-8637-d07fe5e77b60",
+      "count": 1,
+      "id": 6
+    },
+    {
+      "category": "роли",
+      "name": "Філадельфія грін з креветкою",
+      "path": "filadelfiya-grin-z-krevetkoyu",
+      "ingredients": "Рис, крем сир, огірок, креветка, авокадо, спайсі соус, унагі соус",
+      "weight": "270",
+      "price": "319",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F6.-filadelfiya-grin-z-krevetkoyu.jpg?alt=media&token=158aadf7-b96e-4d21-a8b1-85852c0af7c5",
+      "count": 1,
+      "id": 7
+    },
+    {
+      "category": "роли",
+      "name": "Каліфорнія з крабом",
+      "path": "kaliforniya-z-krabom",
+      "ingredients": "Рис, спайсі соус, авокадо, огірок, краб, кунжут",
+      "weight": "250",
+      "price": "263",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F21.-kaliforniya-z-krabom-v-kunzhuti.jpg?alt=media&token=a7f4200f-7cb1-4641-8403-5ce006caacfa",
+      "count": 1,
+      "id": 8
+    },
+    {
+      "category": "роли",
+      "name": "Каліфорнія з лососем",
+      "path": "kaliforniya-z-lososem",
+      "ingredients": "Рис, спайсі соус, авокадо, огірок, лосось, кунжут",
+      "weight": "250 ",
+      "price": "273",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F22.-kaliforniya-z-lososem-v-kunzhuti.jpg?alt=media&token=0b69d4eb-84c4-470e-8f94-efab952d9f9e",
+      "count": 1,
+      "id": 9
+    },
+    {
+      "category": "роли",
+      "name": "Каліфорнія з креветкою",
+      "path": "kaliforniya-z-krevetkoyu",
+      "ingredients": "Рис, спайсі соус, авокадо, огірок, креветка, кунжут",
+      "weight": "250",
+      "price": "283",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F23.-kaliforniya-z-krevetkoyu-v-kunzhuti.jpg?alt=media&token=a2447b97-a09e-4a09-8cae-c0185e9e4e18",
+      "count": 1,
+      "id": 10
+    },
+    {
+      "category": "роли",
+      "name": "Каліфорнія з вугрем",
+      "path": "kaliforniya-z-vugrem",
+      "ingredients": "Рис, авокадо, огірок, вугор, чорний кунжут, унагі соус",
+      "weight": "240",
+      "price": "308",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F24.-kaliforniya-z-vugrem.jpg?alt=media&token=acec1866-c778-491b-8344-170b733fbad4",
+      "count": 1,
+      "id": 11
+    },
+    {
+      "category": "роли",
+      "name": "Запечений сирний з креветкою",
+      "path": "zapechenyj-syrnyj-z-krevetkoyu",
+      "ingredients": "Рис, крем сир, салат айсберг, креветка, кунжут, сирний соус, унагі соус",
+      "weight": "330",
+      "price": "344",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F31.-zapechenyj-syrnyj-z-los.jpg?alt=media&token=82aab0eb-0c8d-4b30-bbf3-31a424848f33",
+      "count": 1,
+      "id": 12
+    },
+    {
+      "category": "роли",
+      "name": "Запечений моно з креветкою",
+      "path": "zapechenyj-mono-z-krevetkoyu",
+      "ingredients": "Рис, крем сир, салат айсберг, креветка, кунжут, моно соус, унагі соус",
+      "weight": "330",
+      "price": "317",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F32.-zapechenyj-mono-z-los.jpg?alt=media&token=a604b168-86e1-4555-a57b-555a6733b7f2",
+      "count": 1,
+      "id": 13
+    },
+    {
+      "category": "роли",
+      "name": "Запечений сирний з лососем",
+      "path": "zapechenyj-syrnyj-z-lososem",
+      "ingredients": "Рис, крем сир, салат айсберг, лосось, кунжут, сирний соус, унагі соус",
+      "weight": "330",
+      "price": "334",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F31.-zapechenyj-syrnyj-z-los.jpg?alt=media&token=82aab0eb-0c8d-4b30-bbf3-31a424848f33",
+      "count": 1,
+      "id": 14
+    },
+    {
+      "category": "роли",
+      "name": "Запечений моно з лососем",
+      "path": "Рис, крем сир, салат айсберг, лосось, кунжут, моно соус, унагі соус",
+      "ingredients": "zapechenyj-mono-z-lososem",
+      "weight": "330",
+      "price": "307",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F32.-zapechenyj-mono-z-los.jpg?alt=media&token=a604b168-86e1-4555-a57b-555a6733b7f2",
+      "count": 1,
+      "id": 15
+    },
+    {
+      "category": "роли",
+      "name": "Запечені моно макі з лососем",
+      "path": "zapechenyj-mono-maki-z-lososem",
+      "ingredients": "Рис, лосось, моно соус, унагі соус, кунжут",
+      "weight": "150",
+      "price": "237",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F33.-zapecheni-mono-maki-z-krevetkoyu.jpg?alt=media&token=8bd3ad48-bd4f-429b-8615-b516d3139609",
+      "count": 1,
+      "id": 16
+    },
+    {
+      "category": "роли",
+      "name": "Запечені моно макі з креветкою",
+      "path": "zapechenyj-mono-maki-z-krevetkoyu",
+      "ingredients": "Рис, креветка, моно соус, унагі соус, кунжут",
+      "weight": "150",
+      "price": "244",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F33.-zapecheni-mono-maki-z-krevetkoyu.jpg?alt=media&token=8bd3ad48-bd4f-429b-8615-b516d3139609",
+      "count": 1,
+      "id": 17
+    },
+    {
+      "category": "роли",
+      "name": "Запечені сирні макі з креветкою",
+      "path": "zapechenyj-syrni-maki-z-krevetkoyu",
+      "ingredients": "Рис, креветка, сирний соус, унагі соус, кунжут",
+      "weight": "150",
+      "price": "254",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F34.-zapecheni-syrni-maki-z-krevetkoyu.jpg?alt=media&token=4e4a741b-f7d1-4592-9958-7dc73535a134",
+      "count": 1,
+      "id": 18
+    },
+    {
+      "category": "роли",
+      "name": "Вегетаріанський з чукою",
+      "path": "vegetarianskyj-z-chukoyu",
+      "ingredients": "Рис, крем сир, авокадо, айсберг, кунжут, чука, горіховий соус, мигдаль",
+      "weight": "300",
+      "price": "249",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F41.-vegetarianskyj-z-chukoyu.jpg?alt=media&token=da41cedf-b760-4a6d-89b5-9aa6665ac780",
+      "count": 1,
+      "id": 19
+    },
+    {
+      "category": "роли",
+      "name": "Сирний",
+      "path": "syrnyj",
+      "ingredients": "Рис, крем сир, фета, кунжут",
+      "weight": "240",
+      "price": "204",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F42.-syrnyj.jpg?alt=media&token=22639fed-39b2-4844-9945-6f07dac10aef",
+      "count": 1,
+      "id": 20
+    },
+    {
+      "category": "роли",
+      "name": "Фелікс з лососем",
+      "path": "feliks-z-lososem",
+      "ingredients": "Рис, крем сир, авокадо, салат айсберг, кунжут, лосось, спайсі соус",
+      "weight": "300",
+      "price": "322",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F43.-feliks-z-lososem.jpg?alt=media&token=53893286-25f8-42e8-b6f9-4d32880003b0",
+      "count": 1,
+      "id": 21
+    },
+    {
+      "category": "роли",
+      "name": "Фелікс з креветкою",
+      "path": "feliks-z-krevetkoyu",
+      "ingredients": "Рис, крем сир, авокадо, салат айсберг, кунжут, креветка, спайсі соус",
+      "weight": "300",
+      "price": "332",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F44.-feliks-z-krevetkoyu.jpg?alt=media&token=fbbf0101-c300-4f94-80e9-a6138c77df68",
+      "count": 1,
+      "id": 22
+    },
+    {
+      "category": "роли",
+      "name": "Фелікс з вугрем",
+      "path": "feliks-z-vugrem",
+      "ingredients": "Рис, крем сир, авокадо, салат айсберг, кунжут, вугор, спайсі соус",
+      "weight": "290",
+      "price": "347",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F45.-feliks-z-vugrem.jpg?alt=media&token=9f269a92-5245-42d3-bc69-3f8869d108af",
+      "count": 1,
+      "id": 23
+    },
+    {
+      "category": "роли",
+      "name": "Філадельфія солена карамель",
+      "path": "filadelfiya-solena-karamel",
+      "ingredients": "Рис, крем сир, авокадо, обпалений лосось, унагі соус",
+      "weight": "290",
+      "price": "359",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F51.-filadelfiya-solena-karamel.jpg?alt=media&token=bc085fd4-25a1-4426-84e5-24037df8ccd3",
+      "count": 1,
+      "id": 24
+    },
+    {
+      "category": "роли",
+      "name": "Мексиканський",
+      "path": "meksykanskyj",
+      "ingredients": "Рис, крем сир, креветка, огірок, кунжут, лосось, гуакамоле, шрірача",
+      "weight": "370",
+      "price": "399",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F52.-meksykanskyj.jpg?alt=media&token=5b87b775-cd8b-420a-bfea-8876776e417a",
+      "count": 1,
+      "id": 25
+    },
+    {
+      "category": "роли",
+      "name": "Макі з огірком",
+      "path": "maki-z-ogirkom",
+      "ingredients": "Рис, норі, огірок",
+      "weight": "120",
+      "price": "115",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F61.-maki-z-ogirkom.jpg?alt=media&token=1b70fdc7-69d7-410c-ba38-f875871e2617",
+      "count": 1,
+      "id": 26
+    },
+    {
+      "category": "роли",
+      "name": "Макі з авокадо",
+      "path": "maki-z-avokado",
+      "ingredients": "Рис, норі, авокадо, унагі соус",
+      "weight": "120",
+      "price": "144",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F62.-maki-z-avokado.jpg?alt=media&token=ca2e80f6-8a1a-487f-afa3-6e0291e217c8",
+      "count": 1,
+      "id": 27
+    },
+    {
+      "category": "роли",
+      "name": "Макі з лососем",
+      "path": "maki-z-lososem",
+      "ingredients": "Рис, норі, лосось",
+      "weight": "120",
+      "price": "192",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F63.-maki-z-lososem-1.jpg?alt=media&token=1bced65d-7711-4e42-a23d-7e04fa70fcaf",
+      "count": 1,
+      "id": 28
+    },
+    {
+      "category": "роли",
+      "name": "Макі з креветкою",
+      "path": "maki-z-krevetkoyu",
+      "ingredients": "Рис, норі, креветка",
+      "weight": "120",
+      "price": "192",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F64.-maki-z-krevetkoyu.jpg?alt=media&token=918c70d3-5ef4-4a08-b076-d5b595abcef8",
+      "count": 1,
+      "id": 29
+    },
+    {
+      "category": "роли",
+      "name": "Макі з тунцем",
+      "path": "maki-z-tunczem",
+      "ingredients": "Рис, норі, тунець",
+      "weight": "120",
+      "price": "182",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F65.-maki-z-tunczem.jpg?alt=media&token=1ba94440-ca2a-44c2-89f1-f9f4086bbb61",
+      "count": 1,
+      "id": 30
+    },
+    {
+      "category": "роли",
+      "name": "Макі з вугрем",
+      "path": "maki-z-vugrem",
+      "ingredients": "Рис, норі, вугор, унагі соус",
+      "weight": "120",
+      "price": "248",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F66.-maki-z-vugrem.jpg?alt=media&token=d3c937cf-4107-42d9-bb75-f8919dda748c",
+      "count": 1,
+      "id": 31
+    }
   ]
 }

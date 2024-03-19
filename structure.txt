@@ -21,3 +21,5 @@ app/
     admin.component
         action.component
         category.component
+        product.component
+        order.component

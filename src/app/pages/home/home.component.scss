@@ -50,28 +50,7 @@
         }
     }
 }
-.rols-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 50px 0;
 
-}
-.rols {
-    width: 10%;
-    border: 1px solid #dcdcdc;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.active {
-    border: none;
-    border-top: 5px solid $mainCol;
-}
-.products {
-    height: 100px;
-}
 
 .main-info {
     width: 70%;

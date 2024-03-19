@@ -1,0 +1,77 @@
+
+
+<button class="btn" (click)="changeStatusForAddNewProduct()">Додати товар</button>
+
+<form class="form" [formGroup]="productForm" (ngSubmit)="saveProduct()"
+    *ngIf="!addNewProduct">
+
+    <label for="category">*Категорія</label>
+    <select formControlName="category" class="form__input big" id="category">
+        <option [ngValue]="category.name" *ngFor="let category of
+            adminCategories">{{category.name}}
+        </option>
+    </select>
+
+    <input formControlName="name"
+        class="form__input" type="text" placeholder="*Назва">
+
+    <input formControlName="path"
+        class="form__input" type="text" placeholder="*Шлях">
+
+    <input formControlName="ingredients"
+        class="form__input big" type="text" placeholder="*Інгредієнти">
+
+    <input formControlName="weight"
+        class="form__input" type="text" placeholder="*Вага">
+
+    <input formControlName="price"
+        class="form__input" type="text" placeholder="*Ціна">
+
+    <ng-container *ngIf="!isUploaded">
+        <input class="form__file" type="file" placeholder=""
+            (change)="upload($event)">
+    </ng-container>
+
+    <ng-container *ngIf="isUploaded">
+        <div class="form__imgAdd">
+        <img class="" [src]="valueByControl('imagePath')"
+            alt="image">
+        <button type="button" class="form__btn" (click)="deleteImage()">ВИДАЛИТИ</button>
+    </div>
+    </ng-container>
+
+    <button type="submit" [disabled]="productForm.invalid"
+        class="form__btn"> {{ editStatus ? 'ЗБЕРЕГТИ' : 'ДОДАТИ' }} </button>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="th1">№</th>
+            <th class="th2">Категорія</th>
+            <th class="th3">Назва</th>
+            <th class="th3">Інгредієнти</th>
+            <th class="th1">Вага</th>
+            <th class="th1">Ціна</th>
+            <th class="th2">Картинка</th>
+            <th class="th2" >Дії</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of adminProducts">
+            <td>№ {{product.id}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.ingredients}}</td>
+            <td>{{product.weight}} г</td>
+            <td>{{product.price}} грн</td>
+            <td><img [src]="product.imagePath"
+                    [alt]="product.name" width="100px"></td>
+            <td class="td">
+                <button (click)="editProduct(product)"
+                    class="table-btn">Редагувати</button>
+                <button [disabled]="editStatus" (click)="deleteProduct(product)"
+                    class="table-btn">Видалити</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

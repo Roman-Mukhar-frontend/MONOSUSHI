@@ -16,7 +16,10 @@ import { DogovirOfertaComponent } from './pages/dogovir-oferta/dogovir-oferta.co
 import { AdminComponent } from './admin/admin.component';
 import { ActionComponent } from './admin/action/action.component';
 import { CategoryComponent } from './admin/category/category.component';
-import { CategoryService } from './shared/services/category/category.service';
+import { OrderComponent } from './admin/order/order.component';
+import { AdminProductComponent } from './admin/admin-product/admin-product.component';
+
+// import { CategoryService } from './shared/services/category/category.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -30,7 +33,10 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent, children: [
   { path: 'action', component: ActionComponent },
   { path: 'category', component: CategoryComponent },
-  // { path: '', pathMatch: 'full', redirectTo: 'action' },
+  { path: '', pathMatch: 'full', redirectTo: 'action' },
+  { path: 'product', component: AdminProductComponent },
+  { path: 'order', component: OrderComponent },
+
   ] },
   
 ];

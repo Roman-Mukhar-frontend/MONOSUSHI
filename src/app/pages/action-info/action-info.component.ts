@@ -18,9 +18,6 @@ export class ActionInfoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // this.activatedRoute.data.subscribe((response) => {
-    //   this.discount = response['discountInfo'];
-    // });
     this.getOneDiscount();
 
   }

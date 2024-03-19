@@ -1,1 +1,48 @@
-<p>product-category works!</p>
+<h1 class="header">Роли</h1>
+
+<ul class="productNav" >
+    <li class="productNav__li active"><a [routerLink]="[ '/product' ]"
+        routerLinkActive="route-active">Всі</a></li>
+    <li class="productNav__li"><a [routerLink]="[ '/product' ]"
+            routerLinkActive="route-active">Роли Філадельфія</a></li>
+    <li class="productNav__li"><a [routerLink]="[ '/product' ]"
+            routerLinkActive="route-active">Роли Каліфорнія</a></li>
+    <li class="productNav__li"><a [routerLink]="[ '/product' ]"
+            routerLinkActive="route-active">Запечені Роли</a></li>
+    <li class="productNav__li"><a [routerLink]="[ '/product' ]"
+            routerLinkActive="route-active">Фірмові Суші</a></li>
+    <li class="productNav__li"><a [routerLink]="[ '/product' ]"
+            routerLinkActive="route-active">Преміум Суші</a></li>
+    <li class="productNav__li"><a [routerLink]="[ '/product' ]"
+            routerLinkActive="route-active">Роли Макі</a></li>
+</ul>
+
+
+<div class="wrapper">
+    <div class="product" *ngFor="let product of usersProducts">
+        <div class="product__img">
+            <img [src]="product.imagePath" alt="product-foto">
+        </div>
+        <div class="product__info" >
+            <h1>{{product.name}}</h1>
+            <div class="product__info__description">
+                <h2>{{product.ingredients}}</h2>
+                <p>{{product.weight}}<span> г</span></p>
+            </div>
+            <div class="product__info__price">
+                <p>{{product.price * product.count}}<span> грн</span>
+                </p>
+                <div class="count">
+                    <button class="count__min"(click)="countMinFunc(product)">-</button>
+                    <span class="count__number">{{product.count}}</span>
+                    <button class="count__plus"(click)="countPlusFunc(product)">+</button>
+                </div>
+                <button class="count__order" type="button">ЗАМОВИТИ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
