@@ -7,13 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  public openMore = false;
-
   constructor() { }
 
   ngOnInit(): void {
   }
-  openMoreFunc(): void {
-    this.openMore = !this.openMore;
-  }
+
 }

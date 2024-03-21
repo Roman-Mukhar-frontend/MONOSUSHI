@@ -69,7 +69,12 @@
   ],
   "products": [
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Макі з тунцем – 50%",
       "path": "maki-z-tunczem-50/",
       "ingredients": "Риc, крем сир, огірок, лосось",
@@ -80,7 +85,12 @@
       "id": 1
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Філадельфія з лососем",
       "path": "filadelfiya-z-lososem",
       "ingredients": "Риc, крем сир, огірок, лосось",
@@ -91,7 +101,12 @@
       "id": 2
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Філадельфія в кунжуті",
       "path": "filadelfiya-v-kunzhuti",
       "ingredients": "Рис, крем сир, огірок, лосось, кунжут",
@@ -102,7 +117,12 @@
       "id": 3
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Філадельфія з тунцем",
       "path": "filadelfiya-z-tunczem",
       "ingredients": "Риc, крем сир, авокадо, тунець, cоус солодкий чилі",
@@ -113,7 +133,12 @@
       "id": 4
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Філадельфія з вугрем",
       "path": "filadelfiya-z-vugrem",
       "ingredients": "Рис, крем сир, авокадо, вугор, унагі соус, кунжут",
@@ -124,7 +149,12 @@
       "id": 5
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Філадельфія з креветкою",
       "path": "filadelfiya-z-krevetkoyu",
       "ingredients": "Рис, крем сир, огірок, креветка, лосось",
@@ -135,7 +165,12 @@
       "id": 6
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Філадельфія грін з креветкою",
       "path": "filadelfiya-grin-z-krevetkoyu",
       "ingredients": "Рис, крем сир, огірок, креветка, авокадо, спайсі соус, унагі соус",
@@ -146,7 +181,12 @@
       "id": 7
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Каліфорнія з крабом",
       "path": "kaliforniya-z-krabom",
       "ingredients": "Рис, спайсі соус, авокадо, огірок, краб, кунжут",
@@ -157,7 +197,12 @@
       "id": 8
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Каліфорнія з лососем",
       "path": "kaliforniya-z-lososem",
       "ingredients": "Рис, спайсі соус, авокадо, огірок, лосось, кунжут",
@@ -168,7 +213,12 @@
       "id": 9
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Каліфорнія з креветкою",
       "path": "kaliforniya-z-krevetkoyu",
       "ingredients": "Рис, спайсі соус, авокадо, огірок, креветка, кунжут",
@@ -179,7 +229,12 @@
       "id": 10
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Каліфорнія з вугрем",
       "path": "kaliforniya-z-vugrem",
       "ingredients": "Рис, авокадо, огірок, вугор, чорний кунжут, унагі соус",
@@ -190,7 +245,12 @@
       "id": 11
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Запечений сирний з креветкою",
       "path": "zapechenyj-syrnyj-z-krevetkoyu",
       "ingredients": "Рис, крем сир, салат айсберг, креветка, кунжут, сирний соус, унагі соус",
@@ -201,7 +261,12 @@
       "id": 12
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Запечений моно з креветкою",
       "path": "zapechenyj-mono-z-krevetkoyu",
       "ingredients": "Рис, крем сир, салат айсберг, креветка, кунжут, моно соус, унагі соус",
@@ -212,7 +277,12 @@
       "id": 13
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Запечений сирний з лососем",
       "path": "zapechenyj-syrnyj-z-lososem",
       "ingredients": "Рис, крем сир, салат айсберг, лосось, кунжут, сирний соус, унагі соус",
@@ -223,7 +293,12 @@
       "id": 14
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Запечений моно з лососем",
       "path": "Рис, крем сир, салат айсберг, лосось, кунжут, моно соус, унагі соус",
       "ingredients": "zapechenyj-mono-z-lososem",
@@ -234,7 +309,12 @@
       "id": 15
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Запечені моно макі з лососем",
       "path": "zapechenyj-mono-maki-z-lososem",
       "ingredients": "Рис, лосось, моно соус, унагі соус, кунжут",
@@ -245,7 +325,12 @@
       "id": 16
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Запечені моно макі з креветкою",
       "path": "zapechenyj-mono-maki-z-krevetkoyu",
       "ingredients": "Рис, креветка, моно соус, унагі соус, кунжут",
@@ -256,7 +341,12 @@
       "id": 17
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Запечені сирні макі з креветкою",
       "path": "zapechenyj-syrni-maki-z-krevetkoyu",
       "ingredients": "Рис, креветка, сирний соус, унагі соус, кунжут",
@@ -267,7 +357,12 @@
       "id": 18
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Вегетаріанський з чукою",
       "path": "vegetarianskyj-z-chukoyu",
       "ingredients": "Рис, крем сир, авокадо, айсберг, кунжут, чука, горіховий соус, мигдаль",
@@ -278,7 +373,12 @@
       "id": 19
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Сирний",
       "path": "syrnyj",
       "ingredients": "Рис, крем сир, фета, кунжут",
@@ -289,7 +389,12 @@
       "id": 20
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Фелікс з лососем",
       "path": "feliks-z-lososem",
       "ingredients": "Рис, крем сир, авокадо, салат айсберг, кунжут, лосось, спайсі соус",
@@ -300,7 +405,12 @@
       "id": 21
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Фелікс з креветкою",
       "path": "feliks-z-krevetkoyu",
       "ingredients": "Рис, крем сир, авокадо, салат айсберг, кунжут, креветка, спайсі соус",
@@ -311,7 +421,12 @@
       "id": 22
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Фелікс з вугрем",
       "path": "feliks-z-vugrem",
       "ingredients": "Рис, крем сир, авокадо, салат айсберг, кунжут, вугор, спайсі соус",
@@ -322,7 +437,12 @@
       "id": 23
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Філадельфія солена карамель",
       "path": "filadelfiya-solena-karamel",
       "ingredients": "Рис, крем сир, авокадо, обпалений лосось, унагі соус",
@@ -333,7 +453,12 @@
       "id": 24
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Мексиканський",
       "path": "meksykanskyj",
       "ingredients": "Рис, крем сир, креветка, огірок, кунжут, лосось, гуакамоле, шрірача",
@@ -344,7 +469,12 @@
       "id": 25
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Макі з огірком",
       "path": "maki-z-ogirkom",
       "ingredients": "Рис, норі, огірок",
@@ -355,7 +485,12 @@
       "id": 26
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Макі з авокадо",
       "path": "maki-z-avokado",
       "ingredients": "Рис, норі, авокадо, унагі соус",
@@ -366,7 +501,12 @@
       "id": 27
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Макі з лососем",
       "path": "maki-z-lososem",
       "ingredients": "Рис, норі, лосось",
@@ -377,7 +517,12 @@
       "id": 28
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Макі з креветкою",
       "path": "maki-z-krevetkoyu",
       "ingredients": "Рис, норі, креветка",
@@ -388,7 +533,12 @@
       "id": 29
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Макі з тунцем",
       "path": "maki-z-tunczem",
       "ingredients": "Рис, норі, тунець",
@@ -399,7 +549,12 @@
       "id": 30
     },
     {
-      "category": "роли",
+      "category": {
+        "name": "роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Froli.svg?alt=media&token=506967a4-31a6-4a5c-bfe9-3d2acaed614f",
+        "id": 1
+      },
       "name": "Макі з вугрем",
       "path": "maki-z-vugrem",
       "ingredients": "Рис, норі, вугор, унагі соус",
@@ -408,6 +563,150 @@
       "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2F66.-maki-z-vugrem.jpg?alt=media&token=d3c937cf-4107-42d9-bb75-f8919dda748c",
       "count": 1,
       "id": 31
+    },
+    {
+      "category": {
+        "name": "сети",
+        "path": "setu",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Fsetu.svg?alt=media&token=768b3608-57b4-43a4-b12e-f7a69f9c7347",
+        "id": 2
+      },
+      "name": "Допоможи ЗСУ разом з Моносушиком",
+      "path": "dopomozhy-zsu-razom-z-monosushi",
+      "ingredients": "Всі виручені кошти перераховуємо в благодійний фонд \"Повернись живим\"",
+      "weight": " ",
+      "price": "50",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2Fsushyk-zsu.jpg?alt=media&token=ff35c3b0-d18c-457b-81e1-d319986ae944",
+      "count": 1,
+      "id": 32
+    },
+    {
+      "category": {
+        "name": "сети",
+        "path": "setu",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Fsetu.svg?alt=media&token=768b3608-57b4-43a4-b12e-f7a69f9c7347",
+        "id": 2
+      },
+      "name": "Сет Філадельфія",
+      "path": "filadelfia-set",
+      "ingredients": "Філадельфія: з лососем / в кунжуті / з тунцем / з вугрем",
+      "weight": "1070",
+      "price": "1150",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2Ffiladelfia_set.jpg?alt=media&token=e1977045-1cd7-4f6e-853f-efc02137eb0d",
+      "count": 1,
+      "id": 33
+    },
+    {
+      "category": {
+        "name": "сети",
+        "path": "setu",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Fsetu.svg?alt=media&token=768b3608-57b4-43a4-b12e-f7a69f9c7347",
+        "id": 2
+      },
+      "name": "Запечений сет",
+      "path": "zapechenyj-set",
+      "ingredients": "Запечений сирний з креветкою Запечений моно з лососем",
+      "weight": "680",
+      "price": "605",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2Fzapechenyj_set.jpg?alt=media&token=1fd64338-968a-43d9-9eea-71182c6b90b2",
+      "count": 1,
+      "id": 34
+    },
+    {
+      "category": {
+        "name": "сети",
+        "path": "setu",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Fsetu.svg?alt=media&token=768b3608-57b4-43a4-b12e-f7a69f9c7347",
+        "id": 2
+      },
+      "name": "Сет Каліфорнія",
+      "path": "california-set",
+      "ingredients": "Каліфорнія: з лососем / з креветкою / з крабом / з вугрем",
+      "weight": "1000",
+      "price": "1050",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2Fcalifornia_set.jpg?alt=media&token=c6810610-987f-491c-890c-00f6c506a349",
+      "count": 1,
+      "id": 35
+    },
+    {
+      "category": {
+        "name": "сети",
+        "path": "setu",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Fsetu.svg?alt=media&token=768b3608-57b4-43a4-b12e-f7a69f9c7347",
+        "id": 2
+      },
+      "name": "Класичний сет",
+      "path": "klasychnyj-set",
+      "ingredients": "Філадельфія з лососем / Каліфорнія з крабом",
+      "weight": "530",
+      "price": "510",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2Fclassic_set.jpg?alt=media&token=8fd81c80-6760-4476-89e6-bc12255e9a4a",
+      "count": 1,
+      "id": 36
+    },
+    {
+      "category": {
+        "name": "сети",
+        "path": "setu",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Fsetu.svg?alt=media&token=768b3608-57b4-43a4-b12e-f7a69f9c7347",
+        "id": 2
+      },
+      "name": "Сет Макі",
+      "path": "set-maki",
+      "ingredients": "Макі: з авокадо / з лососем / з огірком / з вугрем",
+      "weight": "480",
+      "price": "650",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2Fmaki_set.jpg?alt=media&token=1eacfbe7-1403-40f1-a314-6a700f61334b",
+      "count": 1,
+      "id": 37
+    },
+    {
+      "category": {
+        "name": "сети",
+        "path": "setu",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Fsetu.svg?alt=media&token=768b3608-57b4-43a4-b12e-f7a69f9c7347",
+        "id": 2
+      },
+      "name": "Унагі сет",
+      "path": "unagi-set",
+      "ingredients": "Філадельфія з вугрем / Каліфорнія з вугрем / Фелікс з вугрем",
+      "weight": "800",
+      "price": "945",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2Funagi_set.jpg?alt=media&token=09641e81-b474-4d5c-88b3-75d6f878e9e7",
+      "count": 1,
+      "id": 38
+    },
+    {
+      "category": {
+        "name": "напої",
+        "path": "napoyi",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Fnapoyi.svg?alt=media&token=ee555bb6-e030-4a02-8eab-2013c6e31581",
+        "id": 3
+      },
+      "name": "Pepsi",
+      "path": "pepsi-cola",
+      "ingredients": " ",
+      "weight": "0.33",
+      "price": "35",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2Fpepsicola.jpg?alt=media&token=62555355-ac8b-490a-8793-849bb47cf44e",
+      "count": 1,
+      "id": 39
+    },
+    {
+      "category": {
+        "name": "соуси",
+        "path": "sousi",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/category-images%2Fsousi.svg?alt=media&token=23764559-59b0-4e75-ba61-1dc534f600ab",
+        "id": 4
+      },
+      "name": "Імбир",
+      "path": "imbyr",
+      "ingredients": " ",
+      "weight": "30",
+      "price": "15",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/product-images%2Fimbyr.png?alt=media&token=070fbed9-e714-4ada-a09c-faba2c0a6194",
+      "count": 1,
+      "id": 40
     }
   ]
 }

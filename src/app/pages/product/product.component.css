@@ -1,1 +1,202 @@
-/*# sourceMappingURL=product.component.css.map */
+@keyframes drawborder {
+  25% {
+    border-top-color: #b5d8f7;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: #b5d8f7;
+    border-right-color: #b5d8f7;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  75% {
+    border-top-color: #b5d8f7;
+    border-right-color: #b5d8f7;
+    border-bottom-color: #b5d8f7;
+    border-left-color: transparent;
+  }
+  100% {
+    border-color: #b5d8f7;
+  }
+}
+.count__order {
+  cursor: pointer;
+}
+.count__order:hover {
+  animation: btn-background 500ms linear forwards;
+}
+
+@keyframes btn-background {
+  100% {
+    background-color: white;
+  }
+}
+@keyframes text-color {
+  100% {
+    color: #b5d8f7;
+  }
+}
+@keyframes text-decor {
+  100% {
+    color: #b5d8f7;
+    text-decoration: underline;
+    text-decoration-color: #b5d8f7;
+  }
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.route {
+  margin: 20px;
+  color: #b5d8f7;
+  font-size: 14px;
+}
+.route a {
+  text-decoration: none;
+  color: #b5d8f7;
+}
+
+.product {
+  width: 80%;
+  height: 400px;
+  margin: 50px auto;
+  display: flex;
+}
+.product__img {
+  width: 50%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.product__img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.product__info {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product__info h1 {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.product__info p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.product__info span {
+  font-size: 18px;
+}
+.product__info__price {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.product__info__price p {
+  font-size: 20px;
+  font-weight: bolder;
+  display: block;
+  width: 90px;
+}
+.product__info__price span {
+  font-size: 20px;
+  font-weight: normal;
+}
+.product__info__span {
+  color: #b5d8f7;
+}
+
+.count {
+  width: 90px;
+  height: 40px;
+  border: 2px solid #b5d8f7;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.count__plus, .count__min {
+  width: 20px;
+  border: none;
+  background: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+.count__plus:hover, .count__min:hover {
+  background-color: #b5d8f7;
+  transition-duration: 500ms;
+}
+.count__order {
+  width: 90px;
+  height: 40px;
+  background-color: #b5d8f7;
+  border: 2px solid #b5d8f7;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}/*# sourceMappingURL=product.component.css.map */

@@ -31,13 +31,6 @@
     color: #b5d8f7;
   }
 }
-.main-info span {
-  cursor: pointer;
-}
-.main-info span:hover {
-  animation: text-decor 500ms ease-out forwards;
-}
-
 @keyframes text-decor {
   100% {
     color: #b5d8f7;
@@ -144,42 +137,4 @@ table {
 .block button:hover {
   background-color: #b5d8f7;
   transition-duration: 500ms;
-}
-
-.main-info {
-  width: 70%;
-  margin: 20px auto;
-}
-.main-info h1 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 64px;
-  margin-bottom: 20px;
-}
-.main-info p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-.main-info h2 {
-  font-weight: bold;
-  font-size: 42px;
-  margin-bottom: 30px;
-}
-.main-info h3 {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-.main-info ul {
-  margin-bottom: 20px;
-  padding-left: 30px;
-}
-.main-info li {
-  padding-left: 30px;
-  list-style-type: circle;
-  margin-bottom: 10px;
-}
-.main-info span {
-  font-weight: bolder;
-  color: #b5d8f7;
 }/*# sourceMappingURL=home.component.css.map */

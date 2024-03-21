@@ -1,1 +1,32 @@
-<p>product works!</p>
+<p class="route">
+    <a [routerLink]="[ '' ]">Головна</a> -
+    <a [routerLink]="[ '/product-category/'+currentProduct.category.path]">{{currentProduct.category.name}}</a> -
+    {{currentProduct.name}}
+</p>
+
+
+<div class="product">
+    <div class="product__img">
+        <img [src]="currentProduct.imagePath" [alt]="currentProduct.name">
+    </div>
+    <div class="product__info">
+        <div>
+            <h1>{{currentProduct.name}}</h1>
+            <p><span class="product__info__span">Склад: </span>{{currentProduct.ingredients}}</p>
+            <p><span class="product__info__span">Вага: </span>{{currentProduct.weight}}
+                <span *ngIf="currentProduct.weight < 2"> л</span>
+                <span *ngIf="currentProduct.weight > 2"> г</span>
+            </p>
+            <div class="product__info__price">
+                <p>{{currentProduct.price * currentProduct.count}}<span> грн</span>
+                </p>
+                <div class="count">
+                    <button class="count__min" (click)="productCount(currentProduct, false)">-</button>
+                    <span class="count__number">{{currentProduct.count}}</span>
+                    <button class="count__plus" (click)="productCount(currentProduct, true)">+</button>
+                </div>
+                <button class="count__order" type="button" (click)="addToBasket(currentProduct)">ЗАМОВИТИ</button>
+            </div>
+        </div>
+    </div>
+</div>

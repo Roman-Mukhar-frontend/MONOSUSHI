@@ -7,7 +7,7 @@
 
     <label for="category">*Категорія</label>
     <select formControlName="category" class="form__input big" id="category">
-        <option [ngValue]="category.name" *ngFor="let category of
+        <option [ngValue]="category" *ngFor="let category of
             adminCategories">{{category.name}}
         </option>
     </select>
@@ -59,7 +59,7 @@
     <tbody>
         <tr *ngFor="let product of adminProducts">
             <td>№ {{product.id}}</td>
-            <td>{{product.category}}</td>
+            <td>{{product.category.name}}</td>
             <td>{{product.name}}</td>
             <td>{{product.ingredients}}</td>
             <td>{{product.weight}} г</td>

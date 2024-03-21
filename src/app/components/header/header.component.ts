@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ICategoryResponse } from 'src/app/shared/interfaces/category/category.interface';
+import { IProductResponse } from 'src/app/shared/interfaces/product/product.interface';
 import { CategoryService } from 'src/app/shared/services/category/category.service';
+import { OrderService } from 'src/app/shared/services/order/order.service';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +11,9 @@ import { CategoryService } from 'src/app/shared/services/category/category.servi
 })
 export class HeaderComponent implements OnInit {
 
+  private basket: Array<IProductResponse> = [];
+  public total = 0;
+  public countBasket = 0;
   public usersCategoriesArr: Array<ICategoryResponse> = [];
   public openBurgerMenu = false;
   public active = false;
@@ -20,19 +25,40 @@ export class HeaderComponent implements OnInit {
   public openBasket = false;
 
   constructor(
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private orderService: OrderService
   ) { }
 
   ngOnInit(): void {
-    this.getCategories()
+    this.loadBasket();
+    this.getCategories();
+    this.updateBasket();
   }
-  
+
+  loadBasket(): void {
+    if (localStorage.length > 0 && localStorage.getItem('basket')) {
+      this.basket = JSON.parse(localStorage.getItem('basket') as string);
+    }
+    this.getTotalPrice();
+    this.countBasket = this.basket.length;
+  }
+
+  getTotalPrice(): void {
+    this.total = this.basket.reduce((total: number, product: IProductResponse) =>
+      total + product.count * product.price, 0);
+  }
+
+  updateBasket(): void {
+    this.orderService.changeBasket.subscribe(() => {
+      this.loadBasket();
+    })
+  }
+
   getCategories(): void {
     this.categoryService.getAll().subscribe(data => {
       this.usersCategoriesArr = data;
     })
   }
-
 
   menuToggle(): void {
     this.openBurgerMenu = !this.openBurgerMenu;
@@ -74,6 +100,6 @@ export class HeaderComponent implements OnInit {
   closeBasketModal(): void {
     this.closeModal();
     this.openBasket = false;
-
   }
+
 }

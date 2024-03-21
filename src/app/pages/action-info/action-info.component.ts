@@ -19,7 +19,6 @@ export class ActionInfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.getOneDiscount();
-
   }
 
 
