@@ -29,10 +29,10 @@
     border-color: #b5d8f7;
   }
 }
-.basket-modal__empty__btn:hover, .user-modal__form__btn:hover, .call-back :hover {
+.basket-modal__products__count__order, .basket-modal__empty__btn:hover, .user-modal__form__btn:hover, .call-back :hover {
   cursor: pointer;
 }
-.basket-modal__empty__btn:hover, .user-modal__form__btn:hover, .call-back :hover {
+.basket-modal__products__count__order:hover, .basket-modal__empty__btn:hover, .user-modal__form__btn:hover, .call-back :hover {
   animation: btn-background 500ms linear forwards;
 }
 
@@ -41,10 +41,10 @@
     background-color: white;
   }
 }
-.info__number:hover {
+.basket-modal__products__delete p, .info__number:hover {
   cursor: pointer;
 }
-.info__number:hover {
+.basket-modal__products__delete p:hover, .info__number:hover {
   animation: text-color 500ms linear forwards;
 }
 
@@ -219,7 +219,7 @@ table {
 .header-menu {
   position: absolute;
   width: 250px;
-  height: 260px;
+  height: 270px;
   border: 2px solid #b5d8f7;
   border-radius: 10px;
   top: -2px;
@@ -233,6 +233,7 @@ table {
   color: #252525;
   font-size: 15px;
   font-weight: bolder;
+  cursor: pointer;
 }
 .header-menu__li {
   width: 90%;
@@ -289,6 +290,7 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .user__logo {
   border: 2px solid transparent;
@@ -350,7 +352,7 @@ table {
   height: 400px;
   position: absolute;
   top: 150px;
-  left: 508px;
+  left: calc((100vw - 600px) / 2);
   padding: 10px;
   border-radius: 15px;
   background-color: white;
@@ -426,7 +428,6 @@ table {
 
 .basket-modal {
   width: 650px;
-  height: 350px;
   border-radius: 0 0 15px 15px;
   position: absolute;
   top: 95px;
@@ -477,6 +478,88 @@ table {
   border-radius: 10px;
   cursor: pointer;
 }
+.basket-modal__products {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+}
+.basket-modal__products__img {
+  width: 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.basket-modal__products__img img {
+  max-width: 100%;
+}
+.basket-modal__products__name {
+  width: 35%;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.basket-modal__products__count {
+  width: 90px;
+  height: 40px;
+  border: 2px solid #b5d8f7;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin-right: 10px;
+}
+.basket-modal__products__count__plus, .basket-modal__products__count__min {
+  width: 20px;
+  border: none;
+  background: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+.basket-modal__products__count__plus:hover, .basket-modal__products__count__min:hover {
+  background-color: #b5d8f7;
+  transition-duration: 500ms;
+}
+.basket-modal__products__count__order {
+  width: 90px;
+  height: 40px;
+  background-color: #b5d8f7;
+  border: 2px solid #b5d8f7;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.basket-modal__products__summ {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.basket-modal__products__summ span {
+  font-weight: normal;
+}
+.basket-modal__products__delete {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.basket-modal__products__delete p {
+  cursor: pointer;
+  font-weight: bold;
+}
 
 .chekbox {
   cursor: pointer;
@@ -493,4 +576,8 @@ table {
 
 .bold {
   font-weight: bold;
+}
+
+.z-index {
+  z-index: 5;
 }/*# sourceMappingURL=header.component.css.map */

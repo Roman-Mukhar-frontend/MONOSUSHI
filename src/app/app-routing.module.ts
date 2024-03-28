@@ -12,6 +12,11 @@ import { ProductComponent } from './pages/product/product.component';
 import { DostavkaTaOplataComponent } from './pages/dostavka-ta-oplata/dostavka-ta-oplata.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { DogovirOfertaComponent } from './pages/dogovir-oferta/dogovir-oferta.component';
+import { CabinetComponent } from './pages/cabinet/cabinet.component';
+import { UserComponent } from './pages/cabinet/user/user.component';
+import { OrderHistoryComponent } from './pages/cabinet/order-history/order-history.component';
+import { ChangePasswordComponent } from './pages/cabinet/change-password/change-password.component';
+
 
 import { AdminComponent } from './admin/admin.component';
 import { ActionComponent } from './admin/action/action.component';
@@ -20,8 +25,7 @@ import { OrderComponent } from './admin/order/order.component';
 import { AdminProductComponent } from './admin/admin-product/admin-product.component';
 import { ProductInfoResolver } from './shared/services/product/product-info.resolver';
 import { ActionInfoResolver } from './shared/services/action/action-info.resolver';
-
-// import { CategoryService } from './shared/services/category/category.service';
+import { AuthGuard } from './shared/guards/auth/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -41,8 +45,15 @@ const routes: Routes = [
   { path: 'dostavka-ta-oplata', component: DostavkaTaOplataComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'dogovir-oferta', component: DogovirOfertaComponent },
+  { path: 'cabinet', component: CabinetComponent, canActivate: [AuthGuard], children: [
+    { path: 'user', component: UserComponent },
+    { path: '', pathMatch: 'full', redirectTo: 'user' },
+    { path: 'order-history', component: OrderHistoryComponent },
+    { path: 'change-password', component: ChangePasswordComponent },
+  ] },
+
   {
-    path: 'admin', component: AdminComponent, children: [
+    path: 'admin', component: AdminComponent, canActivate: [AuthGuard], children: [
       { path: 'action', component: ActionComponent },
       { path: 'category', component: CategoryComponent },
       { path: '', pathMatch: 'full', redirectTo: 'action' },

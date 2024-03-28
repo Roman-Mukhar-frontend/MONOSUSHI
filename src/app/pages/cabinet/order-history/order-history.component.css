@@ -1,0 +1,111 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@keyframes drawborder {
+  25% {
+    border-top-color: #b5d8f7;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: #b5d8f7;
+    border-right-color: #b5d8f7;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  75% {
+    border-top-color: #b5d8f7;
+    border-right-color: #b5d8f7;
+    border-bottom-color: #b5d8f7;
+    border-left-color: transparent;
+  }
+  100% {
+    border-color: #b5d8f7;
+  }
+}
+@keyframes btn-background {
+  100% {
+    background-color: white;
+  }
+}
+@keyframes text-color {
+  100% {
+    color: #b5d8f7;
+  }
+}
+.return {
+  cursor: pointer;
+}
+.return:hover {
+  animation: text-decor 500ms ease-out forwards;
+}
+
+@keyframes text-decor {
+  100% {
+    color: #b5d8f7;
+    text-decoration: underline;
+    text-decoration-color: #b5d8f7;
+  }
+}
+.empty {
+  font-size: 18px;
+  display: block;
+  height: 300px;
+  padding-top: 50px;
+}
+
+.return {
+  font-weight: bolder;
+  color: #b5d8f7;
+}/*# sourceMappingURL=order-history.component.css.map */

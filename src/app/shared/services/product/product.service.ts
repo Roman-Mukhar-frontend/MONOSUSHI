@@ -21,6 +21,7 @@ export class ProductService {
   }
   
   getAllByCategory(name: string): Observable<IProductResponse[]> {
+    if( !name ) {name = 'roli'};
     return this.http.get<IProductResponse[]>(`${this.api.products}?category.path=${name}`);
   }
 

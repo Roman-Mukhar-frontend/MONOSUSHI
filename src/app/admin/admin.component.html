@@ -12,7 +12,7 @@
             type="button">Товари</button>
         <button class="category" [routerLink]="[ 'order' ]" routerLinkActive="active"
             type="button">Замовлення</button>
-        <button type="button" class="btn" [routerLink]="[ '' ]" >Вихід</button>
+        <button type="button" class="btn" (click)="logOut()" >Вихід</button>
     </div>
     <div class="admin-window">
         <router-outlet></router-outlet>

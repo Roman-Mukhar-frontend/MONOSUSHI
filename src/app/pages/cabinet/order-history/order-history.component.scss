@@ -1,0 +1,16 @@
+@import "../../../shared/styles/base";
+@import "../../../shared/styles/variables";
+
+.empty {
+    font-size: 18px;
+    display: block;
+    height: 300px;
+    padding-top: 50px;
+    
+}
+
+.return {
+    font-weight: bolder;
+    color: $mainCol;
+    @extend %text-decor;
+}

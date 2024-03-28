@@ -71,65 +71,67 @@
     border: 2px solid transparent;
     border-radius: 15px;
     padding: 32px 18px;
+
     &:hover {
-      @extend %border;
+        @extend %border;
     }
 
     .menu-1 {
-      position: relative;
-      display: block;
-      width: 30px;
-      height: 3px;
-      background: $darkText;
-      transition: all 0.5s ease;
-      cursor: pointer;
-      z-index: 100;
-  
-      &:before,
-      &:after {
-        position: absolute;
+        position: relative;
+        display: block;
         width: 30px;
         height: 3px;
-        content: " ";
-        z-index: -1;
-        transition: all 0.5s ease;
         background: $darkText;
-      }
-  
-      &:before {
-        top: -11px;
-        left: 0;
-      }
-  
-      &:after {
-        top: 11px;
-        right: 0;
-      }
-    }
-  }
-  .active {
-    .menu-1 {
-      background: transparent;
-  
-      &:before,
-      &:after {
-        top: 0;
-      }
-  
-      &:after {
-        transform: rotate(135deg);
-      }
-  
-      &:before {
-        transform: rotate(-135deg);
-      }
-    }
-  }
+        transition: all 0.5s ease;
+        cursor: pointer;
+        z-index: 100;
 
-  .header-menu {
+        &:before,
+        &:after {
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            content: " ";
+            z-index: -1;
+            transition: all 0.5s ease;
+            background: $darkText;
+        }
+
+        &:before {
+            top: -11px;
+            left: 0;
+        }
+
+        &:after {
+            top: 11px;
+            right: 0;
+        }
+    }
+}
+
+.active {
+    .menu-1 {
+        background: transparent;
+
+        &:before,
+        &:after {
+            top: 0;
+        }
+
+        &:after {
+            transform: rotate(135deg);
+        }
+
+        &:before {
+            transform: rotate(-135deg);
+        }
+    }
+}
+
+.header-menu {
     position: absolute;
     width: 250px;
-    height: 260px;
+    height: 270px;
     border: 2px solid $mainCol;
     border-radius: 10px;
     top: -2px;
@@ -137,34 +139,40 @@
     background-color: white;
     z-index: 2;
     padding: 60px 20px 0;
+
     &__li a {
-      text-decoration: none;
-      color: $darkText;
-      font-size: 15px;
-      font-weight: bolder;
-    }
-    &__li {
-      width: 90%;
-      min-height: 40px;
-      border: 1px solid transparent;
-      line-height: 25px;
-      text-align: start;
-      padding-left: 10px;
-      margin: 10px;
-      &:hover {
-        @extend %border;
-      }
+        text-decoration: none;
+        color: $darkText;
+        font-size: 15px;
+        font-weight: bolder;
+        cursor: pointer;
+
     }
 
-  }
+    &__li {
+        width: 90%;
+        min-height: 40px;
+        border: 1px solid transparent;
+        line-height: 25px;
+        text-align: start;
+        padding-left: 10px;
+        margin: 10px;
+
+        &:hover {
+            @extend %border;
+        }
+    }
+
+}
 
 .call-back {
     margin: 0 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+
     & :hover {
-    @extend %btn;
+        @extend %btn;
 
     }
 
@@ -201,6 +209,7 @@
         text-align: center;
         font-size: 16px;
         font-weight: 700;
+
         &:hover {
             @extend %text-color;
         }
@@ -218,6 +227,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     &__logo {
         border: 2px solid transparent;
@@ -234,6 +244,7 @@
 .user__logo:hover {
     @extend %border;
 }
+
 
 .basket {
     width: 134px;
@@ -267,6 +278,7 @@
     }
 
 }
+
 .basket-bgr-white {
     background: white;
 }
@@ -286,7 +298,7 @@
     height: 400px;
     position: absolute;
     top: 150px;
-    left: 508px;
+    left: calc((100vw - 600px)/2);
     padding: 10px;
     border-radius: 15px;
     background-color: white;
@@ -310,10 +322,10 @@
         font-weight: bold;
 
         &__text {
-           
+
             text-align: center;
-           
-            
+
+
         }
     }
 
@@ -349,6 +361,7 @@
             text-align: center;
             border-radius: 10px;
             background-color: $mainCol;
+
             &:hover {
                 @extend %btn;
             }
@@ -361,8 +374,8 @@
         justify-content: space-between;
 
         &__text {
-            
-            &:hover{
+
+            &:hover {
                 @extend %text-decor;
             }
         }
@@ -370,10 +383,11 @@
         &__span {
             font-weight: 700;
             margin-left: 5px;
-            &:hover{
+
+            &:hover {
                 @extend %text-decor;
             }
-            
+
         }
     }
 
@@ -387,6 +401,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .w-40 {
     width: 49%;
 }
@@ -395,7 +410,6 @@
 
 .basket-modal {
     width: 650px;
-    height: 350px;
     border-radius: 0 0 15px 15px;
     position: absolute;
     top: 95px;
@@ -409,6 +423,7 @@
     &__empty {
         height: 75%;
         padding: 20px;
+
         &__text {
             padding: 20px;
 
@@ -425,12 +440,15 @@
             border-radius: 10px;
             cursor: pointer;
             margin: 0 auto;
+
             &:hover {
                 @extend %btn;
             }
+
             a {
                 text-decoration: none;
             }
+
             &__text {
                 text-decoration: none;
                 color: black;
@@ -442,22 +460,119 @@
     &__footer {
         height: 25%;
         background-color: $mainCol;
-    border-radius: 0 0 15px 15px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        border-radius: 0 0 15px 15px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         &__btn-order {
             width: 250px;
             height: 35px;
             background-color: gray;
-            // border: 2px solid #b5d8f7;
             border-radius: 10px;
             cursor: pointer;
-            
+
         }
 
+    }
+
+    &__products {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        background-color: white;
+
+        &__img {
+            width: 22%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &__name {
+            width: 35%;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+
+        }
+
+        &__count {
+            width: 90px;
+            height: 40px;
+            border: 2px solid $mainCol;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bolder;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            margin-right: 10px;
+
+            &__plus,
+            &__min {
+                width: 20px;
+                border: none;
+                background: none;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                font-size: 18px;
+
+                &:hover {
+                    background-color: $mainCol;
+                    transition-duration: 500ms;
+                }
+            }
+
+            &__order {
+                width: 90px;
+                height: 40px;
+                background-color: $mainCol;
+                border: 2px solid $mainCol;
+                border-radius: 5px;
+                font-size: 14px;
+                font-weight: 500;
+                @extend %btn;
+            }
+        }
+
+        &__summ {
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+
+            span {
+                font-weight: normal;
+            }
+        }
+
+        &__delete {
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+
+            p {
+                cursor: pointer;
+                font-weight: bold;
+                @extend %text-color;
+            }
+        }
     }
 }
 
@@ -466,16 +581,19 @@
     cursor: pointer;
     margin-right: 10px;
 }
+
 .label {
     cursor: pointer;
 }
-.label-text{
-    &:hover{
+
+.label-text {
+    &:hover {
         @extend %text-decor;
     }
 }
+
 .span {
-    &:hover{
+    &:hover {
         @extend %text-decor;
     }
 }
@@ -483,8 +601,12 @@
 
 .text {
     font-size: 14px;
-  }
-  
-  .bold {
+}
+
+.bold {
     font-weight: bold;
-  }
+}
+
+.z-index {
+    z-index: 5;
+}

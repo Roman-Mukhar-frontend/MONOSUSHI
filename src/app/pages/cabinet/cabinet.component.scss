@@ -1,0 +1,42 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/base";
+
+.admin {
+    width: 60%;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    margin: 20px auto;
+}
+.admin-panel {
+    width: 30%;
+}
+.category {
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    border: none;
+    background-color: white;
+    border-bottom: 5px solid transparent;
+
+}
+.active {
+    border-bottom: 5px solid $mainCol;
+    font-weight: bolder;
+
+}
+
+.btn {
+    width: 80%;
+    height: 40px;
+    border: 2px solid transparent;
+    background-color: $mainCol;
+    font-weight: bolder;
+    margin-top: 20px;
+
+
+}
+
+.admin-window {
+    width: 90%;
+}

@@ -1,0 +1,14 @@
+<div class="admin">
+    <div class="admin-panel">
+        <button class="category" [routerLink]="[ 'user' ]" routerLinkActive="active"
+        type="button">Особисті дані</button>
+        <button class="category" [routerLink]="[ 'order-history' ]" routerLinkActive="active"
+            type="button">Історія замовлень</button>
+        <button class="category" [routerLink]="[ 'change-password' ]" routerLinkActive="active"
+            type="button">Зміна паролю</button>
+        <!-- <button type="button" class="btn" [routerLink]="[ '' ]" >Вихід</button> -->
+    </div>
+    <div class="admin-window">
+        <router-outlet></router-outlet>
+    </div>
+</div>

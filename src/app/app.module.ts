@@ -32,6 +32,10 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { ToastrModule } from 'ngx-toastr';
+import { CabinetComponent } from './pages/cabinet/cabinet.component';
+import { UserComponent } from './pages/cabinet/user/user.component';
+import { OrderHistoryComponent } from './pages/cabinet/order-history/order-history.component';
+import { ChangePasswordComponent } from './pages/cabinet/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,11 @@ import { ToastrModule } from 'ngx-toastr';
     CategoryComponent,
     ActionInfoComponent,
     OrderComponent,
-    AdminProductComponent
+    AdminProductComponent,
+    CabinetComponent,
+    UserComponent,
+    OrderHistoryComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

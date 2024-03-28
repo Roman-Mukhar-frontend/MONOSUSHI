@@ -708,5 +708,21 @@
       "count": 1,
       "id": 40
     }
+  ],
+  "auth": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "fullName": "Admin Adminovych",
+      "role": "ADMIN"
+    },
+    {
+      "id": 2,
+      "email": "user@gmail.com",
+      "password": "user",
+      "fullName": "User Userovych",
+      "role": "USER"
+    }
   ]
 }

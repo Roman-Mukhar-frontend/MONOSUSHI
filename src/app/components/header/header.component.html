@@ -20,7 +20,7 @@
       <div class="nav__link" *ngFor="let category of usersCategoriesArr"
         [routerLink]="[ '/product-category/'+ category.path]">
         <!-- <div class="nav__link__img"> -->
-        <img class="nav__link__img" [src]="category.imagePath" alt="">
+        <img class="nav__link__img" [src]="category.imagePath" [alt]="category.name">
         <!-- </div> -->
         <p class="nav__link__name">{{category.name}}</p>
       </div>
@@ -58,12 +58,37 @@
     </div>
 
     <div class="user">
-      <div class="user__logo" (click)="openSignInFunc()">
+      <div class="user__logo" *ngIf="!isLogin" (click)="openSignInFunc()">
         <img
           src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fuser.svg?alt=media&token=39350238-8708-402b-adcf-d904fd192e5b"
           alt="">
       </div>
+      <div *ngIf="isLogin">
+        <div *ngIf="!isAdmin">
+          <div class="user__logo" (click)="menuToggleUser()">
+            <img [ngClass]="{'z-index': openBurgerMenuUser}"
+              src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fuser.svg?alt=media&token=39350238-8708-402b-adcf-d904fd192e5b"
+              alt="">
+          </div>
+          <div class="header-menu" *ngIf="openBurgerMenuUser" (click)="menuToggleUser()">
+    
+            <ul>
+              <li class="header-menu__li"><a [routerLink]="[ '/cabinet/user' ]">Особисті дані</a></li>
+              <li class="header-menu__li"><a [routerLink]="[ '/cabinet/order-history' ]">Історія замовлень</a></li>
+              <li class="header-menu__li"><a [routerLink]="[ '/cabinet/change-password' ]">Зміна паролю</a></li>
+              <li class="header-menu__li"><a (click)="logOut()">Вихід</a></li>
+    
+            </ul>
+          </div>
+        </div>
+          <div class="user__logo" *ngIf="isAdmin">
+            <img [routerLink]="[ '/admin' ]"
+              src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fuser.svg?alt=media&token=39350238-8708-402b-adcf-d904fd192e5b"
+              alt="">
+          </div>
+      </div>
     </div>
+
     <div class="basket" [ngClass]="{'basket-bgr-white': openBasket}" (click)="openBasketFunc()">
       <div class="basket__logo">
         <img
@@ -106,10 +131,11 @@
   <!-- sing in modal -->
   <div class="user-modal__wrapper" *ngIf="openSignIn">
     <h1 class="user-modal__title bold">Вхід в кабінет</h1>
-    <form class="user-modal__form">
-      <input class="user-modal__form__input" type="email" placeholder="*Ваш email">
-      <input class="user-modal__form__input" type="password" placeholder="*Пароль">
-      <button class="user-modal__form__btn bold" type="submit">УВІЙТИ В КАБІНЕТ</button>
+    <form class="user-modal__form"
+    [formGroup]="authForm" (ngSubmit)="login()">
+      <input formControlName="email" class="user-modal__form__input" type="email" placeholder="*Ваш email">
+      <input formControlName="password" class="user-modal__form__input" type="password" placeholder="*Пароль">
+      <button [disabled]="authForm.invalid" class="user-modal__form__btn bold" type="submit">УВІЙТИ В КАБІНЕТ</button>
     </form>
     <div class="user-modal__bottom">
       <p class="user-modal__bottom__text bold" (click)="openRecoveryPasswordFunc()">Забули пароль?</p>
@@ -166,20 +192,38 @@
 <div class="wrapper-modal" *ngIf="openBasket" (click)="closeModal()">
 </div>
 <div class="basket-modal" *ngIf="openBasket">
-  <div class="basket-modal__empty">
-    <img src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fcart-empty-img.svg?alt=media&token=a89aa257-aa89-495d-8268-8eb61b0d6f83" alt="">
+<!-- <div class="basket-modal" > -->
+
+  <div class="basket-modal__empty" *ngIf="basket.length < 1">
+    <img
+      src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fcart-empty-img.svg?alt=media&token=a89aa257-aa89-495d-8268-8eb61b0d6f83"
+      alt="">
     <p class="basket-modal__empty__text bold">Кошик порожній</p>
     <div class="basket-modal__empty__btn" (click)="closeModal()">
       <a [routerLink]="[ '' ]">
-      <p class="basket-modal__empty__btn__text bold">ПЕРЕЙТИ ДО КАТАЛОГУ</p>
-    </a>
+        <p class="basket-modal__empty__btn__text bold" (click)="closeModal()">ПЕРЕЙТИ ДО КАТАЛОГУ</p>
+      </a>
     </div>
-
-
   </div>
-  <div class="basket-modal__products"></div>
+  <div class="basket-modal__products" *ngFor="let product of basket">
+    <div class="basket-modal__products__img">
+      <img [src]="product.imagePath" [alt]="product.name">
+    </div>
+    <div class="basket-modal__products__name">{{product.name}}</div>
+    <div class="basket-modal__products__count">
+      <button class="basket-modal__products__count__min" (click)="productCount(product, false)">-</button>
+      <span class="basket-modal__products__count__number">{{product.count}}</span>
+      <button class="basket-modal__products__count__plus" (click)="productCount(product, true)">+</button>
+    </div>
+    <div class="basket-modal__products__summ">{{product.count * product.price}} 
+      <span> грн</span>
+    </div>
+    <div class="basket-modal__products__delete">
+      <p (click)="deleteProduct(product)">Видалити</p>
+    </div>
+  </div>
   <div class="basket-modal__footer">
-    <p>Сума: <span class="bold">0 </span>грн</p>
+    <p>Сума: <span class="bold">{{total}}</span> грн</p>
     <button type="button" class="basket-modal__footer__btn-order bold">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
   </div>
 </div>

@@ -1,0 +1,40 @@
+<div class="title">
+    <div class="title__num">1</div>
+    <p class="title__text">Особисті дані</p>
+</div>
+<form class="form" [formGroup]="userDataForm" (ngSubmit)="saveUserData()">
+
+    <input formControlName="name" class="form__input" type="text" placeholder="*Ваше ім'я">
+
+    <input formControlName="lastName" class="form__input" type="text" placeholder="*Ваше прізвище">
+
+    <input formControlName="phoneNumber" class="form__input big" type="text" placeholder="*Ваш номер телефону">
+
+    <input formControlName="email" class="form__input big" type="text" placeholder="*Ваш email">
+
+    <input formControlName="birthdayDate" class="form__input big" type="text" placeholder="День народження">
+
+    <div class="title">
+        <div class="title__num">2</div>
+        <p class="title__text">Адреси</p>
+    </div>
+
+    <div class="form__buttons">
+        <button type="submit" class="form__buttons__btn btn-blue" (click)="openModal()
+        ">ДОДАТИ АДРЕСУ</button>
+        <button type="submit" [disabled]="userDataForm.invalid" class="form__buttons__btn btn-white">ЗБЕРЕГТИ ЗМІНИ</button>
+    </div>
+</form>
+
+<div class="modal-wrapper" *ngIf="openModalWindow" (click)="openModal()"></div>
+<div class="modal-add" *ngIf="openModalWindow">
+    <h1 class="modal-add__title">Нова адреса</h1>
+    <form class="modal-add__form">
+        <input type="text" class="modal-add__form__input" placeholder="*Вкажіть тип адреси (наприклад дім, робота)">
+        <input type="text" class="modal-add__form__input" placeholder="*Введіть вулицю доставки">
+<div class="modal-add__box">
+    <input type="text" class="modal-add__form__input small" placeholder="*№ будинку">
+    <input type="text" class="modal-add__form__input small" placeholder="№ квартири">
+</div>
+    </form>
+</div>

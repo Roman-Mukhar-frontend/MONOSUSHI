@@ -11,7 +11,12 @@ app/
         dostavka-ta-oplata.component
         about-us.component
         dogovir-oferta.component
+        cabinet.component/
+            change-password.component
+            order-history.component
+            user.component
     shared/
+        guards
         styles/
             _variables.scss
             _mixins.scss
@@ -21,5 +26,5 @@ app/
     admin.component
         action.component
         category.component
-        product.component
+        admin-product.component
         order.component
