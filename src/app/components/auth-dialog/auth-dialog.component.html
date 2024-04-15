@@ -1,0 +1,106 @@
+<form [formGroup]="authForm" class="form" *ngIf="authModal" (ngSubmit)="loginUser()">
+    <button class="form-close" mat-icon-button matTooltip="Basic" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+    <h1 class="title">Вхід в кабінет</h1>
+    <div class="form-group">
+        <mat-form-field color="primary" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email">
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <mat-form-field color="primary" appearance="outline" color="primary">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <button class="btn" mat-raised-button color="primary" type="submit" [disabled]="authForm.invalid"
+            mat-dialog-close>УВІЙТИ В КАБІНЕТ</button>
+    </div>
+    <div class="form-bottom">
+        <p class="user-modal__bottom__text bold" (click)="renewPass()">Забули пароль?</p>
+        <p class="user-modal__bottom__text bold" (click)="register()">Зареєструватись</p>
+    </div>
+</form>
+
+<form [formGroup]="authForm" class="form" *ngIf="passModal" (ngSubmit)="loginUser()">
+    <button class="form-close" mat-icon-button matTooltip="Basic" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+    <h1 class="title">Відновити пароль</h1>
+    <p class="text">Після заповнення форми ми надішлемо вам детальну інструкцію по відновленню паролю</p>
+    <div class="form-group">
+        <mat-form-field color="primary" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email">
+        </mat-form-field>
+    </div>
+
+    <div class="form-group">
+        <button class="btn" mat-raised-button color="primary" type="submit" (click)="loginUser()" [disabled]="authForm.invalid"
+            mat-dialog-close>ВІДНОВИТИ ПАРОЛЬ</button>
+    </div>
+    <div class="form-bottom form-bottom-two">
+        <span class="user-modal__bottom">Повернутись до</span>
+        <p (click)="backToMain()">Входу</p>
+    </div>
+</form>
+
+
+<form [formGroup]="registerForm" class="form" *ngIf="registerModal"  (ngSubmit)="registerUser()">
+    <button class="form-close" mat-icon-button matTooltip="Basic" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+    <h1 class="title">Зареєструватись</h1>
+    <div class="form-group">
+        <div class="form-group two">
+            <mat-form-field color="primary" appearance="outline">
+                <mat-label>Ваше ім'я</mat-label>
+                <input matInput type="text" formControlName="firstName">
+            </mat-form-field>
+            <mat-form-field color="primary" appearance="outline">
+                <mat-label>Ваше прізвище</mat-label>
+                <input matInput type="text" formControlName="lastName">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="form-group">
+        <mat-form-field color="primary" appearance="outline">
+            <mat-label>Ваш телефон</mat-label>
+            <input matInput type="text" formControlName="phoneNumber">
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <mat-form-field color="primary" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email">
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <div class="form-group two">
+            <mat-form-field color="primary" appearance="outline">
+                <mat-label>Пароль</mat-label>
+                <input matInput type="password" formControlName="password">
+            </mat-form-field>
+            <mat-form-field color="primary" appearance="outline">
+                <mat-label>Повторіть пароль</mat-label>
+                <input matInput type="password" formControlName="repeatPassword">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="form-group">
+        <mat-checkbox class="example-margin">Я погоджуюсь з
+            <a [routerLink]="[ '/dogovir-oferta' ]" target="blank">Правилами користування</a>
+        </mat-checkbox>
+    </div>
+    <div class="form-group">
+        <button class="btn" mat-raised-button color="primary" type="submit"
+            [disabled]="registerForm.invalid" mat-dialog-close>ЗАРЕЄСТРУВАТИСЬ</button>
+    </div>
+    <div class="form-bottom form-bottom-two">
+        <span class="user-modal__bottom">Вже зареєстровані?</span>
+        <p (click)="backToMain()">Увійти</p>
+    </div>
+</form>

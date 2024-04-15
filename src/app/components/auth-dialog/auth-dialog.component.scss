@@ -1,0 +1,86 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/base";
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 20px 20px;
+}
+
+.form-close {
+margin-left: 95%;
+}
+
+.title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text {
+    margin: 0 40px 10px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.form-group {
+    width: 100%;
+    .mat-form-field {
+        width: 100%;
+    }
+    .mat-checkbox {
+        margin-bottom: 20px;
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: 400;
+            cursor: pointer;
+            &:hover {
+                @extend %text-decor;
+        }
+    }
+
+    }
+}
+.two {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .mat-form-field {
+        width: 48%;
+    }
+}
+.btn {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: $mainCol;
+    font-weight: bold;
+
+    &:hover {
+        @extend %btn;
+    }
+}
+
+.form-bottom {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    p {
+        font-weight: bold;
+        &:hover {
+            @extend %text-decor;
+        }
+    }
+}
+.form-bottom-two {
+    flex-direction: row;
+    justify-content: center;
+    span {
+        margin-right: 5px;
+    }
+}

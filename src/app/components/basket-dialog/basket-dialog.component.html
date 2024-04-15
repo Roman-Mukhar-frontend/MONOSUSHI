@@ -1,0 +1,32 @@
+      <div class="basket-modal__empty" *ngIf="basket.length < 1">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fcart-empty-img.svg?alt=media&token=a89aa257-aa89-495d-8268-8eb61b0d6f83"
+          alt="">
+        <p class="basket-modal__empty__text bold">Кошик порожній</p>
+        <div class="basket-modal__empty__btn">
+          <a [routerLink]="[ '' ]">
+            <p class="basket-modal__empty__btn__text bold">ПЕРЕЙТИ ДО КАТАЛОГУ</p>
+          </a>
+        </div>
+      </div>
+      <div class="basket-modal__products" *ngFor="let product of basket">
+        <div class="basket-modal__products__img">
+          <img [src]="product.imagePath" [alt]="product.name">
+        </div>
+        <div class="basket-modal__products__name">{{product.name}}</div>
+        <div class="basket-modal__products__count">
+          <button class="basket-modal__products__count__min" (click)="productCount(product, false)">-</button>
+          <span class="basket-modal__products__count__number">{{product.count}}</span>
+          <button class="basket-modal__products__count__plus" (click)="productCount(product, true)">+</button>
+        </div>
+        <div class="basket-modal__products__summ">{{product.count * product.price}} 
+          <span> грн</span>
+        </div>
+        <div class="basket-modal__products__delete">
+          <p (click)="deleteProduct(product)">Видалити</p>
+        </div>
+      </div>
+      <div class="basket-modal__footer">
+        <p>Сума: <span class="bold">{{total}}</span> грн</p>
+        <button type="button" class="basket-modal__footer__btn-order bold">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
+      </div>

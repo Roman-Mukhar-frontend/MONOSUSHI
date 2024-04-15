@@ -26,6 +26,8 @@ import { AdminProductComponent } from './admin/admin-product/admin-product.compo
 import { ProductInfoResolver } from './shared/services/product/product-info.resolver';
 import { ActionInfoResolver } from './shared/services/action/action-info.resolver';
 import { AuthGuard } from './shared/guards/auth/auth.guard';
+import { AuthorizationComponent } from './pages/authorization/authorization.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -61,7 +63,8 @@ const routes: Routes = [
       { path: 'order', component: OrderComponent },
 
     ]
-  },
+  },{ path: 'auth', component: AuthorizationComponent }
+
 
 ];
 

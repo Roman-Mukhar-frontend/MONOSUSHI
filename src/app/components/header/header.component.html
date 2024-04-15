@@ -41,7 +41,7 @@
     </div>
 
     <div class="call-back">
-      <div class="call-back__wrapper" (click)="openCallBackFunc()">
+      <div class="call-back__wrapper" (click)="openCallBackDialog()">
         <img
           src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fphone.svg?alt=media&token=dc1176ea-2b74-46e9-86db-d9da057123e6"
           alt="">
@@ -58,11 +58,16 @@
     </div>
 
     <div class="user">
-      <div class="user__logo" *ngIf="!isLogin" (click)="openSignInFunc()">
+      <div class="user__logo" *ngIf="!isLogin" (click)="openLoginDialog()">
         <img
           src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fuser.svg?alt=media&token=39350238-8708-402b-adcf-d904fd192e5b"
           alt="">
       </div>
+      <!-- <div class="user__logo" *ngIf="!isLogin" (click)="openSignInFunc()">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fuser.svg?alt=media&token=39350238-8708-402b-adcf-d904fd192e5b"
+          alt="">
+      </div> -->
       <div *ngIf="isLogin">
         <div *ngIf="!isAdmin">
           <div class="user__logo" (click)="menuToggleUser()">
@@ -109,15 +114,15 @@
 
 
 <!-- UserModal -->
-<div class="wrapper-modal" *ngIf="openModal" (click)="closeModal()">
-</div>
+<!-- <div class="wrapper-modal" *ngIf="openModal" (click)="closeModal()">
+</div> -->
 
-<div class="user-modal" *ngIf="openModal" [ngClass]="{'user-modal__signUp': openSignUp}">
-  <div class="user-modal__close">
+<!-- <div class="user-modal" *ngIf="openModal" [ngClass]="{'user-modal__signUp': openSignUp}"> -->
+  <!-- <div class="user-modal__close">
     <button class="btn-close" (click)="closeModal()"></button>
-  </div>
+  </div> -->
   <!-- call back modal -->
-  <div class="user-modal__wrapper" *ngIf="openCallBack">
+  <!-- <div class="user-modal__wrapper" *ngIf="openCallBack">
     <h1 class="user-modal__title bold">МИ ЗАТЕЛЕФОНУЄМО</h1>
     <p class="user-modal__text">Залиште номер телефону і наші менеджери зв’яжуться з вами</p>
     <form class="user-modal__form">
@@ -125,14 +130,14 @@
       <input type="text" name="" class="user-modal__form__input" placeholder="Ваш номер телефону">
       <button type="submit" class="user-modal__form__btn bold">НАДІСЛАТИ</button>
     </form>
-  </div>
+  </div> -->
   <!-- end call back modal -->
 
   <!-- sing in modal -->
-  <div class="user-modal__wrapper" *ngIf="openSignIn">
+  <!-- <div class="user-modal__wrapper" *ngIf="openSignIn">
     <h1 class="user-modal__title bold">Вхід в кабінет</h1>
     <form class="user-modal__form"
-    [formGroup]="authForm" (ngSubmit)="login()">
+    [formGroup]="authForm" (ngSubmit)="loginUser()">
       <input formControlName="email" class="user-modal__form__input" type="email" placeholder="*Ваш email">
       <input formControlName="password" class="user-modal__form__input" type="password" placeholder="*Пароль">
       <button [disabled]="authForm.invalid" class="user-modal__form__btn bold" type="submit">УВІЙТИ В КАБІНЕТ</button>
@@ -141,11 +146,11 @@
       <p class="user-modal__bottom__text bold" (click)="openRecoveryPasswordFunc()">Забули пароль?</p>
       <p class="user-modal__bottom__text bold" (click)="openSignUpFunc()">Зареєструватись</p>
     </div>
-  </div>
+  </div> -->
   <!-- end sing in modal -->
 
   <!-- Recovery Password modal -->
-  <div class="user-modal__wrapper" *ngIf="openRecoveryPassword">
+  <!-- <div class="user-modal__wrapper" *ngIf="openRecoveryPassword">
     <h1 class="user-modal__title bold">Відновити пароль</h1>
     <p class="user-modal__title__text">Після заповнення форми ми надішлемо вам детальну інструкцію по відновленню паролю
     </p>
@@ -157,44 +162,45 @@
       <p class="user-modal__bottom">Повернутись до <span (click)="openSignInFunc()" class="user-modal__bottom__span">
           Входу</span></p>
     </div>
-  </div>
+  </div> -->
   <!--end Recovery Password modal -->
 
   <!-- sign up modal -->
-  <div class="user-modal__wrapper" *ngIf="openSignUp">
+  <!-- <div class="user-modal__wrapper" *ngIf="openSignUp">
     <h1 class="user-modal__title">Зареєструватись</h1>
-    <form class="user-modal__form">
+    <form class="user-modal__form"
+    [formGroup]="registerForm" (ngSubmit)="registerUser()">
       <div class="form-w-40">
-        <input class="user-modal__form__input w-40" type="text" placeholder="Ваше ім'я">
-        <input class="user-modal__form__input w-40" type="text" placeholder="Ваше прізвище">
+        <input formControlName="firstName" class="user-modal__form__input w-40" type="text" placeholder="Ваше ім'я">
+        <input formControlName="lastName" class="user-modal__form__input w-40" type="text" placeholder="Ваше прізвище">
       </div>
-      <input class="user-modal__form__input" type="text" placeholder="Ваш телефон">
-      <input class="user-modal__form__input" type="email" placeholder="Ваш email">
+      <input formControlName="phoneNumber" class="user-modal__form__input" type="text" placeholder="Ваш телефон">
+      <input formControlName="email" class="user-modal__form__input" type="email" placeholder="Ваш email">
       <div class="form-w-40">
-        <input class="user-modal__form__input w-40" type="password" placeholder="Пароль">
-        <input class="user-modal__form__input w-40" type="password" placeholder="Повторіть пароль">
+        <input formControlName="password" class="user-modal__form__input w-40" type="password" placeholder="Пароль">
+        <input formControlName="repeatPassword" class="user-modal__form__input w-40" type="password" placeholder="Повторіть пароль">
       </div>
       <div class="user-modal__form__label">
         <input type="checkbox" id="checkbox" class="checkbox">
         <label for="checkbox" class="bold label">Я погоджуюсь з</label>
         <span class="bold label-text"> Правилами користування</span>
       </div>
-      <button class="user-modal__form__btn bold" type="submit">Зареєструватись</button>
+      <button [disabled]="registerForm.invalid" class="user-modal__form__btn bold" type="submit">Зареєструватись</button>
     </form>
     <p>Вже зареєстровані? <span class="bold span" (click)="openSignInFunc()">Увійти</span></p>
-  </div>
+  </div> -->
   <!-- end sign up modal -->
 
-</div>
+<!-- </div> -->
 
 
 <!-- basket modal -->
-<div class="wrapper-modal" *ngIf="openBasket" (click)="closeModal()">
+<!-- <div class="wrapper-modal" *ngIf="openBasket" (click)="closeModal()">
 </div>
-<div class="basket-modal" *ngIf="openBasket">
+<div class="basket-modal" *ngIf="openBasket"> -->
 <!-- <div class="basket-modal" > -->
 
-  <div class="basket-modal__empty" *ngIf="basket.length < 1">
+  <!-- <div class="basket-modal__empty" *ngIf="basket.length < 1">
     <img
       src="https://firebasestorage.googleapis.com/v0/b/monosushi-ffc3b.appspot.com/o/main-images%2Fcart-empty-img.svg?alt=media&token=a89aa257-aa89-495d-8268-8eb61b0d6f83"
       alt="">
@@ -226,4 +232,4 @@
     <p>Сума: <span class="bold">{{total}}</span> грн</p>
     <button type="button" class="basket-modal__footer__btn-order bold">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
   </div>
-</div>
+</div> -->

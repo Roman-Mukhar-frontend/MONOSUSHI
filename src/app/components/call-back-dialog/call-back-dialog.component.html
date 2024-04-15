@@ -1,0 +1,23 @@
+<form [formGroup]="callBackForm" class="form"  (ngSubmit)="callBack()">
+    <button class="form-close" mat-icon-button matTooltip="Basic" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+    <h1 class="title">МИ ЗАТЕЛЕФОНУЄМО</h1>
+    <p class="text">Залиште номер телефону і наші менеджери зв’яжуться з вами</p>
+    <div class="form-group">
+        <mat-form-field color="primary" appearance="outline">
+            <mat-label>Ваше ім'я</mat-label>
+            <input matInput type="text" formControlName="name">
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <mat-form-field color="primary" appearance="outline" color="primary">
+            <mat-label>Ваш номер телефону</mat-label>
+            <input matInput type="text" formControlName="phoneNumber">
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <button class="btn" mat-raised-button color="primary" type="submit" [disabled]="callBackForm.invalid"
+            mat-dialog-close>НАДІСЛАТИ</button>
+    </div>
+</form>

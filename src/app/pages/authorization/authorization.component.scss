@@ -1,0 +1,29 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/base";
+
+
+.form {
+    width: 400px;
+    margin: 50px auto;
+
+    h1 {
+        text-align: center;
+        margin: 20px;
+        font-size: 36px;
+        font-weight: bolder;
+    }
+}
+.form-group {
+    width: 100%;
+    .mat-form-field, .mat-raised-button {
+        width: 100%;
+    }
+}
+
+.btn {
+    height: 50px;
+    background-color: $mainCol;
+    &:hover {
+        @extend %btn;
+    }
+}

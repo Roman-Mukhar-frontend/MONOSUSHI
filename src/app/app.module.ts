@@ -31,11 +31,22 @@ import { AdminProductComponent } from './admin/admin-product/admin-product.compo
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+
+
 import { ToastrModule } from 'ngx-toastr';
 import { CabinetComponent } from './pages/cabinet/cabinet.component';
 import { UserComponent } from './pages/cabinet/user/user.component';
 import { OrderHistoryComponent } from './pages/cabinet/order-history/order-history.component';
 import { ChangePasswordComponent } from './pages/cabinet/change-password/change-password.component';
+
+import { AuthDialogComponent } from './components/auth-dialog/auth-dialog.component';
+import { SharedModule } from './shared/shared.module';
+import { AuthorizationComponent } from './pages/authorization/authorization.component';
+import { BasketDialogComponent } from './components/basket-dialog/basket-dialog.component';
+import { CallBackDialogComponent } from './components/call-back-dialog/call-back-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -58,7 +69,11 @@ import { ChangePasswordComponent } from './pages/cabinet/change-password/change-
     CabinetComponent,
     UserComponent,
     OrderHistoryComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    AuthDialogComponent,
+    AuthorizationComponent,
+    BasketDialogComponent,
+    CallBackDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +84,10 @@ import { ChangePasswordComponent } from './pages/cabinet/change-password/change-
     HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage()),
-    ToastrModule.forRoot()
+    provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth()),
+    ToastrModule.forRoot(),
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
