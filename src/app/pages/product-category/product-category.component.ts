@@ -35,7 +35,6 @@ export class ProductCategoryComponent implements OnInit, OnDestroy {
 
   loadAllProducts(): void {
     const categoryName = this.activatedRoute.snapshot.paramMap.get('category') as string;
-    console.log(categoryName);
     this.productService.getAllByCategory(categoryName).subscribe((data) => {
       this.usersProducts = data;
     });
@@ -44,7 +43,7 @@ export class ProductCategoryComponent implements OnInit, OnDestroy {
   productCount(product: IProductResponse, value: boolean): void {
     if (value) {
     ++product.count;
-    } 
+    }
     else if (!value && product.count > 1) {
       --product.count;
     }
@@ -78,4 +77,7 @@ export class ProductCategoryComponent implements OnInit, OnDestroy {
   }
 
 
+  info(product: IProductResponse): void {
+    console.log(product.category.path, product.id);
+  }
 }

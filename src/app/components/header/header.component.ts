@@ -29,11 +29,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   public usersCategoriesArr: Array<ICategoryResponse> = [];
   public openBurgerMenu = false;
   public active = false;
-  // public openModal = false;
-  // public openCallBack = false;
-  // public openSignIn = false;
-  // public openRecoveryPassword = false;
-  // public openSignUp = false;
   public openBasket = false;
 
   public authForm!: FormGroup;
@@ -64,64 +59,18 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.loadBasket();
     this.getCategories();
     this.updateBasket();
-    // this.initAuthForm();
     this.checkUserLogin();
     this.checkUpdatesUserLogin();
-    this.initRegisterForm();
   }
 
   ngOnDestroy(): void {
     this.loginSubscription.unsubscribe();
   }
 
-  // initAuthForm(): void {
-  //   this.authForm = this.fb.group({
-  //     email: [null, [Validators.required, Validators.email]],
-  //     password: [null, [Validators.required]]
-  //   })
-  // }
-
-  initRegisterForm(): void {
-    this.registerForm = this.fb.group({
-      firstName: [null, [Validators.required]],
-      lastName: [null, [Validators.required]],
-      phoneNumber: [null, [Validators.required]],
-      email: [null, [Validators.required, Validators.email]],
-      password: [null, [Validators.required]],
-      repeatPassword: [null, [Validators.required]]
-    })
-  }
 
 
 
-  loginUser(): void {
 
-    // const { email, password } = this.authForm.value;
-    // this.login(email, password).then(() => {
-    //   console.log('login done');
-    //   this.toastr.success('User successfully login');
-    // }).catch(e => {
-    //   this.toastr.error(e.message)
-    // })
-    // this.authForm.reset()
-    // this.closeModal();
-  }
-
-  async login(email: string, password: string): Promise<void> {
-    const credential = await signInWithEmailAndPassword(this.auth, email, password);
-    this.loginSubscription = docData(doc(this.afs, 'users', credential.user.uid)).subscribe(user => {
-      const currentUser = { ...user, uid: credential.user.uid };
-      localStorage.setItem('currentUser', JSON.stringify(currentUser));
-      if (user && user.role === ROLE.USER) {
-        this.router.navigate(['/cabinet']);
-      } else if (user && user.role === ROLE.ADMIN) {
-        this.router.navigate(['/admin']);
-      }
-      this.accountService.isUserLogin$.next(true);
-    }, (e) => {
-      console.log('error', e);
-    })
-  }
 
   checkUserLogin(): void {
     const currentUser = JSON.parse(localStorage.getItem('currentUser') as string);
@@ -148,40 +97,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
 
-  registerUser(): void {
-    const { email, password } = this.registerForm.value;
-this.emailSignUp(email, password).then(() => {
-  this.toastr.success('User successfully created');
-  // this.isLogin = !this.isLogin;
-  // this.isAdmin = false;
-  this.registerForm.reset();
-}).catch(e => {
-  this.toastr.error(e.message);
-  console.log(e.message);
-})
-  }
-
-  async emailSignUp(email: string, password: string): Promise<any> {
-    const credential = await createUserWithEmailAndPassword(this.auth, email, password);
-    const user = {
-      email: credential.user.email,
-      adress1: '',
-      adress2: '',
-      birthDay: '',
-      firstName: '',
-      lastName: '',
-      orders: [],
-      phoneNumber: '',
-      role: 'USER'
-    };
-    setDoc(doc(this.afs, 'users', credential.user.uid), user)
-    // console.log('newUser', credential)
-  }
-
-
-
-
-
 
   loadBasket(): void {
     if (localStorage.length > 0 && localStorage.getItem('basket')) {
@@ -194,6 +109,7 @@ this.emailSignUp(email, password).then(() => {
   getTotalPrice(): void {
     this.total = this.basket.reduce((total: number, product: IProductResponse) =>
       total + product.count * product.price, 0);
+      this.countBasket = this.basket.length;
   }
 
   updateBasket(): void {
@@ -208,18 +124,6 @@ this.emailSignUp(email, password).then(() => {
     })
   }
 
-  deleteProduct(product: IProductResponse): void {
-    if (this.basket.some((item) => item.id === product.id)) {
-      const index = this.basket.findIndex(
-        (item) => item.id === product.id
-      );
-      this.basket.splice(index, 1);
-      localStorage.setItem('basket', JSON.stringify(this.basket));
-      this.updateBasket();
-      this.orderService.changeBasket.next(true);
-    }
-  }
-
   menuToggle(): void {
     this.openBurgerMenu = !this.openBurgerMenu;
     this.active = !this.active;
@@ -229,20 +133,6 @@ this.emailSignUp(email, password).then(() => {
     this.openBurgerMenuUser = !this.openBurgerMenuUser;
 
   }
-
-  // closeModal(): void {
-  //   this.openModal = false;
-  //   this.openCallBack = false;
-  //   this.openSignIn = false;
-  //   this.openRecoveryPassword = false;
-  //   this.openSignUp = false;
-  //   this.openBasket = false;
-  // }
-
-  // openCallBackFunc(): void {
-  //   this.openModal = true;
-  //   this.openCallBack = true;
-  // }
 
   openCallBackDialog(): void {
     this.dialog.open(CallBackDialogComponent, {
@@ -273,38 +163,5 @@ this.emailSignUp(email, password).then(() => {
       console.log(result);
     })
   }
-
-
-  // openSignInFunc(): void {
-  //   this.openModal = true;
-  //   this.openSignIn = true;
-  //   this.openRecoveryPassword = false;
-  //   this.openSignUp = false;
-  // }
-
-  // openRecoveryPasswordFunc(): void {
-  //   this.openSignIn = false;
-  //   this.openRecoveryPassword = true;
-  // }
-  // openSignUpFunc(): void {
-  //   this.openSignIn = false;
-  //   this.openSignUp = true;
-  // }
-  // openBasketFunc(): void {
-  //   this.openBasket = !this.openBasket;
-  // }
-  // closeBasketModal(): void {
-  //   this.closeModal();
-  //   this.openBasket = false;
-  // }
-
-  // productCount(product: IProductResponse, value: boolean): void {
-  //   if (value) {
-  //     ++product.count;
-  //   } else if (!value && product.count > 1) {
-  //     --product.count;
-  //   }
-  //   this.getTotalPrice();
-  // }
 
 }

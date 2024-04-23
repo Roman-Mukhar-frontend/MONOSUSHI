@@ -1,7 +1,7 @@
 <div class="actions">
     <h1 class="header">Акції на суші</h1>
     <div class="userDiscount">
-        <div [routerLink]="[ '/action', discount.id ]" class="userDiscount__block"
+        <div [routerLink]="[ '/actions', discount.id ]" class="userDiscount__block"
             *ngFor="let discount of usersDiscounts">
             <img class="userDiscount__block__img" [src]="discount.imagePath" alt="">
             <h2 class="userDiscount__block__name">{{discount.name}}</h2>

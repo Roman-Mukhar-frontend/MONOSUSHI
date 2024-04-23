@@ -18,10 +18,10 @@
 <div class="wrapper">
     <div class="product" *ngFor="let product of usersProducts">
         <div class="product__img">
-            <img [routerLink]="[ '/product', product.id]" [src]="product.imagePath" [alt]="product.name">
+            <img [routerLink]="['/product/'+product.category.path, product.id]" [src]="product.imagePath" [alt]="product.name">
         </div>
         <div class="product__info">
-            <h1 [routerLink]="[ '/product', product.id]">{{product.name}}</h1>
+            <h1 [routerLink]="[ '/product/'+product.category.path, product.id]">{{product.name}}</h1>
             <div class="product__info__description">
                 <h2>{{product.ingredients}}</h2>
                 <p>{{product.weight}}

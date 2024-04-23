@@ -3,30 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-
-import { HomeComponent } from './pages/home/home.component'
-import { ActionsComponent } from './pages/actions/actions.component';
-import { ActionInfoComponent } from './pages/action-info/action-info.component';
-import { ProductCategoryComponent } from './pages/product-category/product-category.component';
-import { ProductComponent } from './pages/product/product.component';
-import { DostavkaTaOplataComponent } from './pages/dostavka-ta-oplata/dostavka-ta-oplata.component';
-import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { DogovirOfertaComponent } from './pages/dogovir-oferta/dogovir-oferta.component';
-
-import { AdminComponent } from './admin/admin.component';
-import { ActionComponent } from './admin/action/action.component';
-import { CategoryComponent } from './admin/category/category.component';
-import { OrderComponent } from './admin/order/order.component';
-import { AdminProductComponent } from './admin/admin-product/admin-product.component';
-
 
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
@@ -36,16 +17,12 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 
 
 import { ToastrModule } from 'ngx-toastr';
-import { CabinetComponent } from './pages/cabinet/cabinet.component';
-import { UserComponent } from './pages/cabinet/user/user.component';
-import { OrderHistoryComponent } from './pages/cabinet/order-history/order-history.component';
-import { ChangePasswordComponent } from './pages/cabinet/change-password/change-password.component';
 
 import { AuthDialogComponent } from './components/auth-dialog/auth-dialog.component';
 import { SharedModule } from './shared/shared.module';
-import { AuthorizationComponent } from './pages/authorization/authorization.component';
 import { BasketDialogComponent } from './components/basket-dialog/basket-dialog.component';
 import { CallBackDialogComponent } from './components/call-back-dialog/call-back-dialog.component';
+import {ProductCategoryModule} from "./pages/product-category/product-category.module";
 
 
 @NgModule({
@@ -53,25 +30,7 @@ import { CallBackDialogComponent } from './components/call-back-dialog/call-back
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
-    ActionsComponent,
-    ProductCategoryComponent,
-    ProductComponent,
-    DostavkaTaOplataComponent,
-    AboutUsComponent,
-    DogovirOfertaComponent,
-    AdminComponent,
-    ActionComponent,
-    CategoryComponent,
-    ActionInfoComponent,
-    OrderComponent,
-    AdminProductComponent,
-    CabinetComponent,
-    UserComponent,
-    OrderHistoryComponent,
-    ChangePasswordComponent,
     AuthDialogComponent,
-    AuthorizationComponent,
     BasketDialogComponent,
     CallBackDialogComponent
   ],
@@ -79,15 +38,13 @@ import { CallBackDialogComponent } from './components/call-back-dialog/call-back
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage()),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
     ToastrModule.forRoot(),
-    SharedModule
+    SharedModule,
+    ProductCategoryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

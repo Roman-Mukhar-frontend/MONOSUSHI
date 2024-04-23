@@ -1,75 +1,66 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {PreloadAllModules, PreloadingStrategy, RouterModule, Routes} from '@angular/router';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-import { HomeComponent } from './pages/home/home.component'
-import { ActionsComponent } from './pages/actions/actions.component';
-import { ActionInfoComponent } from './pages/action-info/action-info.component';
-import { ProductCategoryComponent } from './pages/product-category/product-category.component';
-import { ProductComponent } from './pages/product/product.component';
-import { DostavkaTaOplataComponent } from './pages/dostavka-ta-oplata/dostavka-ta-oplata.component';
-import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { DogovirOfertaComponent } from './pages/dogovir-oferta/dogovir-oferta.component';
-import { CabinetComponent } from './pages/cabinet/cabinet.component';
-import { UserComponent } from './pages/cabinet/user/user.component';
-import { OrderHistoryComponent } from './pages/cabinet/order-history/order-history.component';
-import { ChangePasswordComponent } from './pages/cabinet/change-password/change-password.component';
-
-
-import { AdminComponent } from './admin/admin.component';
-import { ActionComponent } from './admin/action/action.component';
-import { CategoryComponent } from './admin/category/category.component';
-import { OrderComponent } from './admin/order/order.component';
-import { AdminProductComponent } from './admin/admin-product/admin-product.component';
 import { ProductInfoResolver } from './shared/services/product/product-info.resolver';
 import { ActionInfoResolver } from './shared/services/action/action-info.resolver';
 import { AuthGuard } from './shared/guards/auth/auth.guard';
-import { AuthorizationComponent } from './pages/authorization/authorization.component';
+
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', redirectTo: '' },
-  { path: 'actions', component: ActionsComponent },
+
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+
   {
-    path: 'action/:id', component: ActionInfoComponent, resolve: {
-      actionInfo: ActionInfoResolver
-    }
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then((m) => m.HomeModule),
   },
-  { path: 'product-category/:category', component: ProductCategoryComponent },
-  {
-    path: 'product/:id', component: ProductComponent, resolve: {
-      productInfo: ProductInfoResolver
-    }
+
+  { path: 'product/:category',
+    loadChildren: () => import('./pages/product-category/product-category.module').then(m => m.ProductCategoryModule)
   },
-  { path: 'dostavka-ta-oplata', component: DostavkaTaOplataComponent },
-  { path: 'about-us', component: AboutUsComponent },
-  { path: 'dogovir-oferta', component: DogovirOfertaComponent },
-  { path: 'cabinet', component: CabinetComponent, canActivate: [AuthGuard], children: [
-    { path: 'user', component: UserComponent },
-    { path: '', pathMatch: 'full', redirectTo: 'user' },
-    { path: 'order-history', component: OrderHistoryComponent },
-    { path: 'change-password', component: ChangePasswordComponent },
-  ] },
+
+  { path: 'actions',
+    loadChildren: () => import('./pages/actions/actions.module').then(m => m.ActionsModule)
+  },
+
+  { path: 'dostavka-ta-oplata',
+    loadChildren: () => import('./pages/dostavka-ta-oplata/dostavka-ta-oplata.module').then(m => m.DostavkaTaOplataModule)
+  },
+
+  { path: 'dogovir-oferta',
+    loadChildren: () => import('./pages/dogovir-oferta/dogovir-oferta.module').then(m => m.DogovirOfertaModule)
+  },
+
+  { path: 'about-us',
+    loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
+  },
 
   {
-    path: 'admin', component: AdminComponent, canActivate: [AuthGuard], children: [
-      { path: 'action', component: ActionComponent },
-      { path: 'category', component: CategoryComponent },
-      { path: '', pathMatch: 'full', redirectTo: 'action' },
-      { path: 'product', component: AdminProductComponent },
-      { path: 'order', component: OrderComponent },
+    path: 'cabinet',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./pages/cabinet/cabinet.module').then(m => m.CabinetModule)
+  },
 
-    ]
-  },{ path: 'auth', component: AuthorizationComponent }
+  {
+    path: 'admin',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
 
+  { path: 'auth',
+    loadChildren: () => import('./pages/authorization/authorization.module').then(m => m.AuthorizationModule)
+  }
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
