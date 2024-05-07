@@ -15,7 +15,7 @@ export class BasketDialogComponent implements OnInit {
 
   constructor(
     private orderService: OrderService,
-    
+
   ) { }
 
   ngOnInit(): void {
@@ -30,7 +30,7 @@ export class BasketDialogComponent implements OnInit {
       --product.count;
     }
     this.getTotalPrice();
-    // this.header.getTotalPrice();
+
   }
 
   deleteProduct(product: IProductResponse): void {

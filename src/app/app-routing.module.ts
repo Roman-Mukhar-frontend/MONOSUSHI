@@ -4,8 +4,8 @@ import {PreloadAllModules, PreloadingStrategy, RouterModule, Routes} from '@angu
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-import { ProductInfoResolver } from './shared/services/product/product-info.resolver';
-import { ActionInfoResolver } from './shared/services/action/action-info.resolver';
+// import { ProductInfoResolver } from './shared/services/product/product-info.resolver';
+// import { ActionInfoResolver } from './shared/services/action/action-info.resolver';
 import { AuthGuard } from './shared/guards/auth/auth.guard';
 
 

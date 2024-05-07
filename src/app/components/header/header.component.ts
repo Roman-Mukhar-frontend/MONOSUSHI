@@ -1,10 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Auth, UserCredential, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@angular/fire/auth';
-import { Firestore, doc, docData, setDoc } from '@angular/fire/firestore';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 import { Subscription } from 'rxjs';
 import { ROLE } from 'src/app/shared/constants/role.constant';
 import { ICategoryResponse } from 'src/app/shared/interfaces/category/category.interface';
@@ -31,8 +27,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   public active = false;
   public openBasket = false;
 
-  public authForm!: FormGroup;
-  public registerForm!: FormGroup;
 
   public openBurgerMenuUser = false;
   public isLogin = false;
@@ -45,12 +39,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   constructor(
     private categoryService: CategoryService,
     private orderService: OrderService,
-    private fb: FormBuilder,
     private accountService: AccountService,
     private router: Router,
-    private auth: Auth,
-    private afs: Firestore,
-    private toastr: ToastrService,
     public dialog: MatDialog,
 
   ) { }
@@ -64,16 +54,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    if (this.loginSubscription)
     this.loginSubscription.unsubscribe();
   }
 
 
-
-
-
-
   checkUserLogin(): void {
     const currentUser = JSON.parse(localStorage.getItem('currentUser') as string);
+    console.log(currentUser);
     if (currentUser && currentUser.role === ROLE.ADMIN) {
       this.isLogin = true;
       this.isAdmin = true;
@@ -156,7 +144,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   openBasketFunc(): void {
     this.dialog.open(BasketDialogComponent, {
-      backdropClass: 'basket-dialog-back', 
+      backdropClass: 'basket-dialog-back',
       panelClass: 'basket-dialog',
       autoFocus: false
     }).afterClosed().subscribe(result => {

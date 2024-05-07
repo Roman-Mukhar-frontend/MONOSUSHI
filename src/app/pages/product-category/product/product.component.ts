@@ -11,7 +11,23 @@ import { ProductService } from 'src/app/shared/services/product/product.service'
 })
 export class ProductComponent implements OnInit {
 
-  public currentProduct!: IProductResponse;
+  // public currentProduct!: IProductResponse;
+  public currentProduct: IProductResponse =     {
+    "category": {
+      "name": "",
+      "path": "",
+      "imagePath": "",
+      "id": 0
+    },
+    "name": "",
+    "path": "",
+    "ingredients": "",
+    "weight": 0,
+    "price": 0,
+    "imagePath": "",
+    "count":0,
+    "id": 0
+  };
 
   constructor(
     private productService: ProductService,
@@ -21,11 +37,11 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadProduct();
+
   }
 
   loadProduct(): void {
     const DISCOUNT_ID = Number(this.activatedRoute.snapshot.paramMap.get('id'));
-    console.log(this.activatedRoute.snapshot.paramMap);
     this.productService.getOne(DISCOUNT_ID).subscribe(data => {
       this.currentProduct = data;
     })

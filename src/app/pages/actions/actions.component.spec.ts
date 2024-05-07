@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ActionsComponent } from './actions.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import {Storage} from "@angular/fire/storage";
 
 describe('ActionsComponent', () => {
   let component: ActionsComponent;
@@ -8,7 +11,14 @@ describe('ActionsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ActionsComponent ]
+      declarations: [ ActionsComponent ],
+      imports: [
+        RouterTestingModule,
+        HttpClientTestingModule
+      ],
+      providers: [
+        { provide: Storage, useValue: {} }
+      ]
     })
     .compileComponents();
   });

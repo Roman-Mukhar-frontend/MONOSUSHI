@@ -19,6 +19,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { ToastrModule } from 'ngx-toastr';
 
 import { AuthDialogComponent } from './components/auth-dialog/auth-dialog.component';
+import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { BasketDialogComponent } from './components/basket-dialog/basket-dialog.component';
 import { CallBackDialogComponent } from './components/call-back-dialog/call-back-dialog.component';
@@ -43,6 +44,7 @@ import {ProductCategoryModule} from "./pages/product-category/product-category.m
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
     ToastrModule.forRoot(),
+    HttpClientModule,
     SharedModule,
     ProductCategoryModule
   ],

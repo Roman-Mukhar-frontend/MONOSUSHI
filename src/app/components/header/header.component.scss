@@ -22,7 +22,8 @@
 }
 
 .nav {
-    display: flex;
+    display: inline-flex;
+  flex-wrap: nowrap;
     margin-left: 15px;
 
     &__link {
@@ -128,6 +129,15 @@
     }
 }
 
+.nav-right {
+  width: 45%;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
 .header-menu {
     position: absolute;
     width: 250px;
@@ -166,7 +176,7 @@
 }
 
 .call-back {
-    margin: 0 50px;
+    //margin: 0 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,7 +210,7 @@
 
 
 .info {
-    margin: 0 50px;
+    //margin: 0 50px;
     display: block;
     justify-content: center;
     align-items: center;
@@ -223,7 +233,7 @@
 
 
 .user {
-    margin: 0 50px;
+    //margin: 0 50px;
     display: flex;
     justify-content: center;
     align-items: center;
