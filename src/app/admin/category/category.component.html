@@ -13,7 +13,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let category of adminCategories">
-            <td>№{{category.id}}</td>
+            <td>{{adminCategories.indexOf(category) +1}}</td>
             <td>{{category.name}}</td>
             <td>{{category.path}}</td>
             <td><img [src]="category.imagePath"

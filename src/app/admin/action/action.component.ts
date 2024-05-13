@@ -18,7 +18,7 @@ export class ActionComponent implements OnInit {
   public discountForm!: FormGroup;
   public editStatus = false;
   public isUploaded = false;
-  private currentDiscountId = 0;
+  private currentDiscountId!: string;
 
   constructor(
     private fb: FormBuilder,
@@ -45,7 +45,7 @@ export class ActionComponent implements OnInit {
 
   loadCategories(): void {
     this.actionService.getAll().subscribe(data => {
-      this.adminDiscounts = data;
+      this.adminDiscounts = data as IDiscountResponse[];
     })
   }
 
@@ -57,13 +57,13 @@ export class ActionComponent implements OnInit {
     if (this.editStatus) {
       this.actionService
         .updateDiscount(this.discountForm.value, this.currentDiscountId)
-        .subscribe(() => {
+        .then(() => {
           this.loadCategories();
           this.toastr.success('Discount successfully updated');
 
         });
     } else {
-      this.actionService.createDiscount(this.discountForm.value).subscribe(() => {
+      this.actionService.createDiscount(this.discountForm.value).then(() => {
         this.loadCategories();
         this.toastr.success('Discount successfully created');
 
@@ -92,9 +92,9 @@ export class ActionComponent implements OnInit {
 
   deleteDiscount(discount: IDiscountResponse): void {
     if (confirm(`Do you want to delete discount ${discount.name}`)) {
-      this.actionService.deleteDiscount(discount.id).subscribe(() => {
+      this.actionService.deleteDiscount(discount.id).then(() => {
         this.loadCategories();
-        this.toastr.success('Discount successfully daleted');
+        this.toastr.success('Discount successfully deleted');
 
       })
     }

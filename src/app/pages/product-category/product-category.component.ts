@@ -35,8 +35,8 @@ export class ProductCategoryComponent implements OnInit, OnDestroy {
 
   loadAllProducts(): void {
     const categoryName = this.activatedRoute.snapshot.paramMap.get('category') as string;
-    this.productService.getAllByCategory(categoryName).subscribe((data) => {
-      this.usersProducts = data;
+    this.productService.getAllByCategory(categoryName).then((data) => {
+      this.usersProducts = data as IProductResponse[];
     });
   }
 

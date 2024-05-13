@@ -3,41 +3,72 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { IProductRequest, IProductResponse } from '../../interfaces/product/product.interface';
+import {
+  addDoc,
+  collectionData,
+  CollectionReference,
+  deleteDoc,
+  doc,
+  docData,
+  Firestore,
+  updateDoc,
+  query,
+  where,
+  getDocs
+} from "@angular/fire/firestore";
+import {collection, DocumentData} from "@firebase/firestore";
+import {IDiscountRequest} from "../../interfaces/action/action.interface";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  private url = environment.BACKEND_URL;
-  private api = { products: `${this.url}/products` }
+  private productCollection!: CollectionReference<DocumentData>;
 
   constructor(
-    private http: HttpClient
-  ) { }
-
-  getAll(): Observable<IProductResponse[]> {
-    return this.http.get<IProductResponse[]>(this.api.products)
+    private afs: Firestore
+  ) {
+    this.productCollection = collection(this.afs, 'products');
   }
-  
-  getAllByCategory(name: string): Observable<IProductResponse[]> {
+
+  getAll() {
+    return collectionData(this.productCollection, { idField: 'id' });
+  }
+
+  async getAllByCategory(name: string) {
     if( !name ) {name = 'roli'};
-    return this.http.get<IProductResponse[]>(`${this.api.products}?category.path=${name}`);
+
+    const arr: DocumentData[] = [];
+    const category = query(
+      this.productCollection,
+      where('category.path', '==', `${name}`)
+    );
+    const querySnapshot = await getDocs(category);
+    querySnapshot.forEach((doc) => {
+      arr.push({ ...doc.data(), id: doc.id });
+    });
+    return arr;
   }
 
-  getOne(id: number): Observable<IProductResponse> {
-    return this.http.get<IProductResponse>(`${this.api.products}/${id}`);
+  getOne(id: string) {
+    // const productDocumentReference = doc(this.afs, `products/${id}`);
+    // return docData(productDocumentReference, { idField: 'id' });
+    return docData(doc(this.afs, `products/${id}`), { idField: 'id' });
+
   }
 
-  createProduct(product: IProductRequest): Observable<IProductResponse> {
-    return this.http.post<IProductResponse>(this.api.products, product)
+  createProduct(product: IProductRequest) {
+    return addDoc(this.productCollection, product);
   }
 
-  updateProduct(product: IProductRequest, id: number): Observable<IProductResponse> {
-    return this.http.patch<IProductResponse>(`${this.api.products}/${id}`, product);
+  updateProduct(product: IProductRequest, id: string) {
+    const productDocumentReference = doc(this.afs, `products/${id}`);
+    return updateDoc(productDocumentReference, {...product});
   }
 
-  deleteProduct(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.api.products}/${id}`);
+  deleteProduct(id: string) {
+    const productDocumentReference = doc(this.afs, `products/${id}`);
+    return deleteDoc(productDocumentReference);
   }
 }

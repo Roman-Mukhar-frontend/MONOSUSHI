@@ -1,38 +1,41 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import { IDiscountRequest, IDiscountResponse } from '../../interfaces/action/action.interface';
+import { IDiscountRequest } from '../../interfaces/action/action.interface';
+import { addDoc, collectionData, CollectionReference, deleteDoc, doc, docData, Firestore, updateDoc } from '@angular/fire/firestore';
+import { collection, DocumentData } from '@firebase/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ActionService {
 
-  private url = environment.BACKEND_URL;
-  private api = { actions: `${this.url}/actions` }
+  private discountCollection!: CollectionReference<DocumentData>;
 
   constructor(
-    private http: HttpClient
-  ) { }
-
-  getAll(): Observable<IDiscountResponse[]> {
-    return this.http.get<IDiscountResponse[]>(this.api.actions)
+    private afs: Firestore
+  ) {
+    this.discountCollection = collection(this.afs, 'discounts');
   }
 
-  getOne(id: number): Observable<IDiscountResponse> {
-    return this.http.get<IDiscountResponse>(`${this.api.actions}/${id}`);
+  getAll() {
+    return collectionData(this.discountCollection, { idField: 'id' });
   }
 
-  createDiscount(action: IDiscountRequest): Observable<IDiscountResponse> {
-    return this.http.post<IDiscountResponse>(this.api.actions, action)
+  getOne(id: string) {
+    const discountDocumentReference = doc(this.afs, `discounts/${id}`);
+    return docData(discountDocumentReference, { idField: 'id' });
   }
 
-  updateDiscount(action: IDiscountRequest, id: number): Observable<IDiscountResponse> {
-    return this.http.patch<IDiscountResponse>(`${this.api.actions}/${id}`, action);
+  createDiscount(discount: IDiscountRequest) {
+    return addDoc(this.discountCollection, discount);
   }
 
-  deleteDiscount(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.api.actions}/${id}`);
+  updateDiscount(discount: IDiscountRequest, id: string) {
+    const discountDocumentReference = doc(this.afs, `discounts/${id}`);
+    return updateDoc(discountDocumentReference, {...discount});
+  }
+
+  deleteDiscount(id: string) {
+    const discountDocumentReference = doc(this.afs, `discounts/${id}`);
+    return deleteDoc(discountDocumentReference);
   }
 }

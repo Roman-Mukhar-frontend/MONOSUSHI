@@ -21,7 +21,7 @@ export class ActionsComponent implements OnInit {
 
   loadAllDiscounts(): void {
     this.actionService.getAll().subscribe((data) => {
-      this.usersDiscounts = data;
+      this.usersDiscounts = data as IDiscountResponse[];
     });
   }
 }

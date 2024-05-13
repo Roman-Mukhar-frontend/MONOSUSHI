@@ -16,6 +16,7 @@ export class ProductInfoResolver implements Resolve<IProductResponse> {
 constructor(private productService: ProductService) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IProductResponse> {
-    return this.productService.getOne(Number(route.paramMap.get('id')))
+    // @ts-ignore
+    return this.productService.getOne(route.paramMap.get('id'));
   }
 }

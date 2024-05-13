@@ -19,7 +19,7 @@ export class CategoryComponent implements OnInit {
   public editStatus = false;
   public uploadPercent!: number;
   public isUploaded = false;
-  private currentCategoryId = 0;
+  private currentCategoryId!: number | string;
 
   constructor(
     private fb: FormBuilder,
@@ -43,7 +43,7 @@ export class CategoryComponent implements OnInit {
 
   loadCategories(): void {
     this.categoryService.getAll().subscribe(data => {
-      this.adminCategories = data;
+      this.adminCategories = data as ICategoryResponse[];
     })
   }
 
@@ -54,17 +54,16 @@ export class CategoryComponent implements OnInit {
   saveCategory(): void {
     if (this.editStatus) {
       this.categoryService
-        .updateCategory(this.categoryForm.value, this.currentCategoryId)
-        .subscribe(() => {
+        .updateCategory(this.categoryForm.value, this.currentCategoryId as string)
+        .then(() => {
           this.loadCategories();
           this.toastr.success('Category successfully updated');
-
         });
     } else {
-      this.categoryService.createCategory(this.categoryForm.value).subscribe(() => {
+
+      this.categoryService.createCategory(this.categoryForm.value).then(() => {
         this.loadCategories();
         this.toastr.success('Category successfully created');
-
       });
     }
     this.isUploaded = false;
@@ -83,13 +82,16 @@ export class CategoryComponent implements OnInit {
     this.currentCategoryId = category.id;
     this.isUploaded = true;
     this.addNewCategory = false;
+    // this.categoryService.getOneFirebase(category.id as string).subscribe(data => {
+    //   console.log( data )
+    // })
   }
 
   deleteCategory(category: ICategoryResponse): void {
     if (confirm(`Do you want to delete category ${category.name}`)) {
-      this.categoryService.deleteCategory(category.id).subscribe(() => {
-        this.loadCategories();
-        this.toastr.success('Category successfully deleted');
+      this.categoryService.deleteCategory(category.id as string).then(() => {
+          this.loadCategories();
+          this.toastr.success('Category successfully deleted');
 
       })
     }
@@ -125,4 +127,5 @@ export class CategoryComponent implements OnInit {
     return this.categoryForm.get(control)?.value;
   }
 
+  protected readonly toString = toString;
 }

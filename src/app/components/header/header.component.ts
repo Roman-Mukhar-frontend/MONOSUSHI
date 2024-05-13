@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import {Subject, Subscription} from 'rxjs';
 import { ROLE } from 'src/app/shared/constants/role.constant';
 import { ICategoryResponse } from 'src/app/shared/interfaces/category/category.interface';
 import { IProductResponse } from 'src/app/shared/interfaces/product/product.interface';
@@ -33,7 +33,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   public isAdmin = false;
 
   public loginSubscription!: Subscription;
-
 
 
   constructor(
@@ -108,7 +107,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   getCategories(): void {
     this.categoryService.getAll().subscribe(data => {
-      this.usersCategoriesArr = data;
+      this.usersCategoriesArr = data as ICategoryResponse[];
     })
   }
 

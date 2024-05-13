@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { IProductResponse } from 'src/app/shared/interfaces/product/product.interface';
 import { OrderService } from 'src/app/shared/services/order/order.service';
 import { ProductService } from 'src/app/shared/services/product/product.service';
+import {IDiscountResponse} from "../../../shared/interfaces/action/action.interface";
 
 @Component({
   selector: 'app-product',
@@ -11,13 +12,12 @@ import { ProductService } from 'src/app/shared/services/product/product.service'
 })
 export class ProductComponent implements OnInit {
 
-  // public currentProduct!: IProductResponse;
   public currentProduct: IProductResponse =     {
     "category": {
       "name": "",
       "path": "",
       "imagePath": "",
-      "id": 0
+      "id": "qqq"
     },
     "name": "",
     "path": "",
@@ -26,8 +26,9 @@ export class ProductComponent implements OnInit {
     "price": 0,
     "imagePath": "",
     "count":0,
-    "id": 0
+    "id": "id"
   };
+  // public  currentProduct!: IProductResponse;
 
   constructor(
     private productService: ProductService,
@@ -41,9 +42,9 @@ export class ProductComponent implements OnInit {
   }
 
   loadProduct(): void {
-    const DISCOUNT_ID = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+    const DISCOUNT_ID = this.activatedRoute.snapshot.paramMap.get('id') as string;
     this.productService.getOne(DISCOUNT_ID).subscribe(data => {
-      this.currentProduct = data;
+      this.currentProduct = data as IProductResponse;
     })
   }
 

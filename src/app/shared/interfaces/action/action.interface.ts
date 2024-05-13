@@ -7,5 +7,5 @@ imagePath: string;
 }
 
 export interface IDiscountResponse extends IDiscountRequest {
-    id: number;
+    id: string;
 }

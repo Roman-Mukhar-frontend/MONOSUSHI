@@ -6,6 +6,8 @@ import { ICategoryResponse } from 'src/app/shared/interfaces/category/category.i
 import { CategoryService } from 'src/app/shared/services/category/category.service';
 import { ImageService } from 'src/app/shared/services/image/image.service';
 import { ToastrService } from 'ngx-toastr';
+import {findIndex} from "rxjs/operators";
+import {IDiscountResponse} from "../../shared/interfaces/action/action.interface";
 
 
 @Component({
@@ -22,7 +24,7 @@ export class AdminProductComponent implements OnInit {
   public editStatus = false;
   public uploadPercent!: number;
   public isUploaded = false;
-  private currentProductId = 0;
+  private currentProductId!: string;
 
   constructor(
     private fb: FormBuilder,
@@ -53,7 +55,7 @@ export class AdminProductComponent implements OnInit {
 
   loadCategories(): void {
     this.categoryService.getAll().subscribe((data) => {
-      this.adminCategories = data;
+      this.adminCategories = data as ICategoryResponse[];
       this.productForm.patchValue({
         category: this.adminCategories[0].id,
       });
@@ -62,7 +64,7 @@ export class AdminProductComponent implements OnInit {
 
   loadProducts(): void {
     this.productService.getAll().subscribe(data => {
-      this.adminProducts = data;
+      this.adminProducts = data as IProductResponse[];
     })
   }
 
@@ -73,12 +75,12 @@ export class AdminProductComponent implements OnInit {
     if (this.editStatus) {
       this.productService
         .updateProduct(this.productForm.value, this.currentProductId)
-        .subscribe(() => {
+        .then(() => {
           this.loadProducts();
           this.toastr.success('Product successfully updated');
         });
     } else {
-      this.productService.createProduct(this.productForm.value).subscribe(() => {
+      this.productService.createProduct(this.productForm.value).then(() => {
         this.loadProducts();
         this.toastr.success('Product successfully created');
       });
@@ -99,7 +101,7 @@ export class AdminProductComponent implements OnInit {
       weight: product.weight,
       price: product.price,
       imagePath: product.imagePath,
-      count: 1
+      // count: 1
     });
     this.editStatus = true;
     this.currentProductId = product.id;
@@ -107,9 +109,9 @@ export class AdminProductComponent implements OnInit {
     this.addNewProduct = false;
   }
 
-  deleteProduct(product: IProductResponse): void {
+  deleteProduct(product: IProductResponse) {
     if (confirm(`Do you want to delete product ${product.name}`)) {
-      this.productService.deleteProduct(product.id).subscribe(() => {
+      this.productService.deleteProduct(product.id).then(() => {
         this.loadProducts();
         this.toastr.success('Product successfully deleted');
 
@@ -148,4 +150,5 @@ export class AdminProductComponent implements OnInit {
   }
 
 
+  protected readonly findIndex = findIndex;
 }

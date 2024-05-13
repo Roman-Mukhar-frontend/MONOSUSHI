@@ -58,7 +58,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let product of adminProducts">
-            <td>№ {{product.id}}</td>
+            <td>{{adminProducts.indexOf(product) + 1}}</td>
             <td>{{product.category.name}}</td>
             <td>{{product.name}}</td>
             <td>{{product.ingredients}}</td>

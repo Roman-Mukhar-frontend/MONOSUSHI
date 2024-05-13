@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IProductResponse } from 'src/app/shared/interfaces/product/product.interface';
 import { OrderService } from 'src/app/shared/services/order/order.service';
 
+
 @Component({
   selector: 'app-basket-dialog',
   templateUrl: './basket-dialog.component.html',
@@ -14,8 +15,7 @@ export class BasketDialogComponent implements OnInit {
   public countBasket = 0;
 
   constructor(
-    private orderService: OrderService,
-
+    private orderService: OrderService
   ) { }
 
   ngOnInit(): void {
@@ -26,10 +26,13 @@ export class BasketDialogComponent implements OnInit {
   productCount(product: IProductResponse, value: boolean): void {
     if (value) {
       ++product.count;
+      localStorage.setItem('basket', JSON.stringify(this.basket));
     } else if (!value && product.count > 1) {
       --product.count;
+      localStorage.setItem('basket', JSON.stringify(this.basket));
     }
     this.getTotalPrice();
+
 
   }
 
@@ -41,7 +44,7 @@ export class BasketDialogComponent implements OnInit {
       this.basket.splice(index, 1);
       localStorage.setItem('basket', JSON.stringify(this.basket));
       this.updateBasket();
-      this.orderService.changeBasket.next(true);
+
     }
   }
 

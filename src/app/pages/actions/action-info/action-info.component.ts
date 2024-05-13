@@ -23,9 +23,9 @@ export class ActionInfoComponent implements OnInit {
 
 
   getOneDiscount(): void {
-    const DISCOUNT_ID = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+    const DISCOUNT_ID = this.activatedRoute.snapshot.paramMap.get('id') as string;
     this.actionService.getOne(DISCOUNT_ID).subscribe(data => {
-      this.discount = data;
+      this.discount = data as IDiscountResponse;
     })
   }
 }
